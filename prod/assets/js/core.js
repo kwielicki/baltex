@@ -193,6 +193,37 @@
                         $this.css('color', $color);
                     });
                 }
+
+        // Code for mode-rewrite data-attributes
+        if ($('[data-mode-rewrite="on"]').length > 0) {
+            $('a[href]').each(function() {
+                var $this    = $(this),
+                    attrHref = $this.attr('href');
+                
+                $this.attr('data-rewrite-mode', attrHref + ".html");
+
+                var modeRewiteText = $this.attr('data-rewrite-mode');
+                console.log(modeRewiteText);
+                $this.attr('href', modeRewiteText);
+                $this.attr('data-rewrite-mode', attrHref);
+            }); 
+        }
+
+        /* 
+         * JAVASCRIPT CODE FOR SITE BALTEX
+         * *******************************
+         *
+         * 1 - Navbar searcher
+        */
+
+        //- 1
+        $('.js-searcher').on('click', function() {
+            $(this).stop().toggleClass('nav-bar__icon--active');
+            $('.form-searcher').stop().slideToggle('400');
+            $('.nav-bar__source').toggleClass('nav-bar__source--active');
+        })
+
+
 	}); //- Document on ready [end]
 
 	$(window).on('load', function() {

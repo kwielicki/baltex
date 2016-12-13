@@ -1,9 +1,15 @@
 //- Document Head
 extends config/base
 block page_content
-    .container
-        .row
-            .col-xs-12
-                .jumbotron
-                    h1.display-3 Boilerplate v1.0.1
-                    p.lead Przygotwany w oparciu o Bootstrapa w wersji 4.0.0, Jade, Gulpa oraz preprocesor Sass.
+	section
+		.component.main-slider.ct-js-slick(data-height="550", data-arrows="false", data-dots="true")
+			.item(data-background="http://pixel-industry.com/wordpress/trucking/wp-content/uploads/2015/10/slide01.jpg", data-background-position="50% 50%")
+				.container
+					.row
+						.col-xs-12
+							h2 Item 1
+			.item(data-background="http://www.drewnoplaneta.pl/wp-content/uploads/2014/03/Horizon-P4250076.jpg", data-background-position="50% 50%").main-slider__item.main-slider__item--overlayed
+				.container
+					.row
+						.col-xs-12
+							h2 Item 2

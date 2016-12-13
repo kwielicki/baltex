@@ -1,0 +1,38 @@
+.form-searcher {
+	display: none;
+	background-color: $gray-lighter;
+	padding: $spacer-xl;
+	border-bottom: 3px solid $brand-second;
+	.form-group {
+		@include clearfix;
+		margin-bottom: 0;
+		display: table;
+		width: 100%;
+		max-width: 991px;
+	}
+	.form-group__inner {
+		display: initial;
+	}
+	&__input {
+		float: left;
+		width: 70%;
+		padding: $spacer-sm;
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+		&:focus {
+			border-color: $brand-primary;
+		}
+	}
+	&__button {
+		float: left;
+		padding: $spacer-sm;
+		border-color: $brand-primary;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+		width: 30%;
+	}
+	&__label {
+		display: block;
+		color: $brand-second;
+	}
+}

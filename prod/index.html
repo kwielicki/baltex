@@ -2,7 +2,7 @@
 <html lang="en" class="no-js ie8"></html><![endif]-->
 <!--[if IE 9 ]>
 <html lang="en" class="no-js ie9"></html><![endif]-->
-<html class="no-js" lang="en" data-resized='250'>
+<html class="no-js dom-html" lang="en" data-project-name="baltex" data-resized='250' data-mode-rewrite="on">
   <head>
     <meta charset="utf-8">
     <meta name="description" content="Boilerplate - demo description">
@@ -16,11 +16,79 @@
     <link rel="apple-touch-icon" href="assets/images/favicon.png">
     <link rel="stylesheet" href="assets/css/style.min.css">
   </head>
-  <body class="css-animate">
+  <body class="css-animate dom-body">
+    <div class="component js-cookies-policy">
+      <div class="cookies-policy">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="cookies-policy__inner">
+                <p><strong>Używamy plików cookies</strong>, aby ułatwić Ci korzystanie z mojego boilerplate oraz do celów statystycznych. Jeśli nie blokujesz tych plików, to zgadzasz się na ich użycie oraz zapisanie w pamięci urządzenia. Pamiętaj, że możesz samodzielnie zarządzać cookies, zmieniając ustawienia przeglądarki. Więcej informacji znajdziesz na stronie <a href="#" title="Dowiedź się więcej o Naszej polityce prywatności">polityka prywatności</a>.</p>
+                <div class="text-xs-right"><span role="link" title="Zaakceptuj Naszą politykę prywatności" class="js-cookies-policy__close btn btn-danger">Akceptuję</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div id="page-wrapper">
       <main id="content-wrapper" class="content-wrapper">
-        <h1>Hello. It's working.</h1>
-        <p>Wiadomość testowa</p>
+        <navbar class="component nav-bar">
+          <div class="nav-bar__inner">
+            <div class="container">
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="nav-bar__source">
+                    <div class="nav-bar__header">
+                      <h5 class="nav-bar__title">Bałtex FHU <sup>&#174;</sup></h5>
+                      <h6 class="nav-bar__subtitle"> <a href="#" title="Transport międzynarodowy" class="nav-bar__sneakpeak">Transport międzynarodowy</a><a href="#" title="Sprzedaż tarcicy" class="nav-bar__sneakpeak">Sprzedaż tarcicy</a><a href="#" title="Magazyn czasowego składowania" class="nav-bar__sneakpeak">Magazyn czasowego składowania</a></h6>
+                    </div>
+                    <ul class="nav-bar__nav list-unstyled">
+                      <li class="nav-bar__search"><a href="#" title="Wyszukaj frazy na stronie" class="nav-bar__icon js-searcher"><i aria-hidden="true" class="fa fa-search"></i></a></li>
+                      <li class="nav-bar__hamburger"><a href="#" title="Menu głowne strony" class="nav-bar__icon js-hamburger"><i aria-hidden="true" class="fa fa-bars"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xs-12">
+                  <div class="component form-searcher">
+                    <div class="form-searcher__inner">
+                      <form action="">
+                        <div class="form-group">
+                          <div class="form-group__inner">
+                            <input type="text" placeholder="Wyszukaj na stronie" required class="form-control form-searcher__input">
+                            <button type="submit" class="btn btn-primary form-searcher__button">Wyszukaj w serwisie</button><span class="form-searcher__label">Wpisz słowo lub frazę, aby wyszukać w witrynie</span>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </navbar>
+        <section>
+          <div data-height="550" data-arrows="false" data-dots="true" class="component main-slider ct-js-slick">
+            <div data-background="http://pixel-industry.com/wordpress/trucking/wp-content/uploads/2015/10/slide01.jpg" data-background-position="50% 50%" class="item">
+              <div class="container">
+                <div class="row">
+                  <div class="col-xs-12">
+                    <h2>Item 1</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div data-background="http://www.drewnoplaneta.pl/wp-content/uploads/2014/03/Horizon-P4250076.jpg" data-background-position="50% 50%" class="item main-slider__item main-slider__item--overlayed">
+              <div class="container">
+                <div class="row">
+                  <div class="col-xs-12">
+                    <h2>Item 2</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
     <script src="assets/js/vendor.min.js"></script>

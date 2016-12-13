@@ -1,0 +1,40 @@
+.main-slider {
+	margin-top: -1px;
+	&__item {
+		&--overlayed {
+			position: relative;
+			&:after {
+				content: '';
+			    position: absolute;
+			    left: 0;
+			    top: 0;
+			    width: 100%;
+			    height: 100%;
+			    background: rgba(21, 37, 60, 0.45);
+			    z-index: 1;
+			}
+		}
+	}
+	.slick-dots {
+		@include clearfix;
+		display: block;
+		max-width: 1110px;
+		margin: 0 auto;
+		list-style-type: none;
+		padding: 0;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: $spacer-xs;
+		li {
+			float: left;
+			width: 25%;
+			button {
+				display: block;
+				width: 100%;
+				background-color: #fff;
+				border: 1px solid #fff;
+			}
+		}
+	}
+}

@@ -208,6 +208,22 @@
                 $this.attr('data-rewrite-mode', attrHref);
             }); 
         }
+
+        /* 
+         * JAVASCRIPT CODE FOR SITE BALTEX
+         * *******************************
+         *
+         * 1 - Navbar searcher
+        */
+
+        //- 1
+        $('.js-searcher').on('click', function() {
+            $(this).stop().toggleClass('nav-bar__icon--active');
+            $('.form-searcher').stop().slideToggle('400');
+            $('.nav-bar__source').toggleClass('nav-bar__source--active');
+        })
+
+
 	}); //- Document on ready [end]
 
 	$(window).on('load', function() {

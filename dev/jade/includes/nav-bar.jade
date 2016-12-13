@@ -1,0 +1,28 @@
+navbar.component.nav-bar
+	.nav-bar__inner
+		.container
+			.row
+				.col-xs-12
+					.nav-bar__source
+						.nav-bar__header
+							h5.nav-bar__title Bałtex FHU #[sup &#174;]
+							h6.nav-bar__subtitle 
+								a(href="#", title="Transport międzynarodowy").nav-bar__sneakpeak Transport międzynarodowy
+								a(href="#", title="Sprzedaż tarcicy").nav-bar__sneakpeak Sprzedaż tarcicy
+								a(href="#", title="Magazyn czasowego składowania").nav-bar__sneakpeak Magazyn czasowego składowania
+						ul.nav-bar__nav.list-unstyled
+							li.nav-bar__search
+								a.nav-bar__icon.js-searcher(href="#", title="Wyszukaj frazy na stronie")
+									i.fa.fa-search(aria-hidden="true")
+							li.nav-bar__hamburger
+								a.nav-bar__icon.js-hamburger(href="#", title="Menu głowne strony")
+									i.fa.fa-bars(aria-hidden="true")
+				.col-xs-12
+					.component.form-searcher
+						.form-searcher__inner
+							form(action="")
+								.form-group
+									.form-group__inner
+										input(type="text" class="form-control form-searcher__input", placeholder="Wyszukaj na stronie" required)
+										button(type="submit" class="btn btn-primary form-searcher__button") Wyszukaj w serwisie
+										span.form-searcher__label Wpisz słowo lub frazę, aby wyszukać w witrynie
