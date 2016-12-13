@@ -1,0 +1,55 @@
+//- Document Head
+extends config/base
+block page_content
+	.container
+		.row
+			.col-xs-12
+				.jumbotron
+					h1.display-3 Boilerplate v1.0.0
+					p.lead Przygotwany w oparciu o Bootstrapa w wersji 4.0.0, Jade, Gulpa oraz preprocesor Sass.
+					hr.my-2
+					p
+						| Zawiera szereg bibliotek, które pomogę Ci zorganizować pracę nad projektem.
+						| Występują w nim:
+					ul.list-unstyled
+						li - jQuery #[code v1.11.3]
+						li - device.js #[code v0.2.7]
+						li - browser.js #[code v0.0.8]
+						li - jquery.placeholder #[code v2.3.1]
+						li - jquery.visible
+					h2 Struktura projektu
+					table.table.table-striped
+						thead 
+							tr
+								td Folder "DEV"
+								td Folder "PROD"
+						tbody
+							tr
+								td 
+									ul.list-unstyled
+										li dev
+											ul.list-unstyled
+												li - fonts
+												li - images
+												li - jade
+													ul.list-unstyled
+														li -- config
+														li -- includes
+														li -- js
+														li -- mixins
+												li - js
+													ul.list-unstyled
+														li -- plugins
+														li -- vendor
+												li - sass
+													ul.list-unstyled
+														li -- bootstrap
+														li -- site
+								td
+									ul.list-unstyled
+										li prod
+											ul.list-unstyled
+												li - assets
+													ul.list-unstyled
+														li -- css
+														li -- js
