@@ -1,0 +1,10 @@
+.section {
+	padding-top: $spacer-xl;
+	padding-bottom: $spacer-xl;
+	&--ghost {
+		padding: 0;
+	}
+}
+img {
+	max-width: 100%;
+}

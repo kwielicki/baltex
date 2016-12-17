@@ -6,3 +6,8 @@
 a {
 	@include transition;
 }
+
+code {
+	background-color: $brand-second;
+	color: #fff;
+}

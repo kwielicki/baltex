@@ -1,0 +1,9 @@
+.css-animate .animated {
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.css-animate .animated.activate {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}

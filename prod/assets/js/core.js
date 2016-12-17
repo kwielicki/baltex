@@ -56,6 +56,28 @@
             }, TIMEOUT);
         });
 
+    /* Equal height */
+    $.fn.equalheight = function(){
+        var $this = $(this),
+            $array = [],
+            options = {
+              height: false,
+              minHeight: true,
+              reset: false
+            };
+        $this.each(function(){
+            var $outerHeight = $this.outerHeight();
+            $array.push($outerHeight);
+        });
+        var maxValue = Math.max.apply(Math,$array);
+        if (options['height'] === true){
+            $this.css('height', maxValue + "px");
+        }
+        if (options['minHeight'] === true){
+            $this.css('min-height', maxValue + "px");
+        }
+    };  
+
     $(document).on('ready', function() {
 
         /** jQuery browser / device **/
@@ -214,6 +236,7 @@
          * *******************************
          *
          * 1 - Navbar searcher
+         * 2 - Main slider custom paging
         */
 
         //- 1
@@ -223,10 +246,55 @@
             $('.nav-bar__source').toggleClass('nav-bar__source--active');
         })
 
+        //- 2
+        $(".main-slider").slick({
+            dots: true,
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 7000,
+            pauseOnHover: true,
+            speed: 500,
+            customPaging : function(slider, i) {
+                var thumb = $(slider.$slides[i]).data('thumb');
+                return "<span style='background-image: url(" + $(slider.$slides[i]).data('background') + ")'>" + "<h6>" + thumb;
+            },
+        });
+        $(".main-slider").on('beforeChange', function(){
+
+            var $this = $(this);
+            $this.find(".slick-slide [data-fx]").each(function () {
+                var $content = $(this);
+                $content.removeClass($content.data('fx')).removeClass("activate");
+            });
+            setTimeout(function () {
+                $this.find(".slick-active [data-fx]").each(function () {
+                    var $content = $(this);
+                    if ($content.data('time') != undefined) {
+                        setTimeout(function () {
+                            $content.addClass($content.data('fx')).addClass("activate");
+                        }, $content.data('time'));
+                    } else{
+                        $content.addClass($content.data('fx')).addClass("activate");
+                    }
+                })
+            }, 150);
+        });
+
 
 	}); //- Document on ready [end]
 
 	$(window).on('load', function() {
+
+        /* 
+         * JAVASCRIPT CODE FOR SITE BALTEX
+         * *******************************
+         * 1 - Synchronizacja wysokośći tytułu dla głownej karuzeli
+         * 
+        */
+
+        if ($html.hasClass('mobile')) {
+            $(".main-slider").find('.main-slider__title').equalheight();
+        }
 
 		$body.addClass('window-loaded');
 
@@ -241,6 +309,7 @@
         /* Execute function for css animate */
         cssAnimate();
 
+
 	});//- Window on load [end]
 
     $(window).on('scroll', function() {
@@ -251,6 +320,18 @@
     }); //- Window on scroll [end]
 
     $(window).on('resizeend', function() {
+
+        /* 
+         * JAVASCRIPT CODE FOR SITE BALTEX
+         * *******************************
+         * 1 - Synchronizacja wysokośći tytułu dla głownej karuzeli
+         * 
+        */
+
+        if ($html.hasClass('mobile')) {
+            $(".main-slider").find('.main-slider__title').equalheight();
+        }
+
         
     }); //- window on resize [end]
 

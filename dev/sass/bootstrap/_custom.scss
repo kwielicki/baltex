@@ -20,6 +20,7 @@ $path_images: $path_assets + 'images/';
 //- Colors
 $brand-primary		: #212a34;
 $brand-primary-light: #494f54;
+$blue-dark			: #405e74;
 $brand-second		: #ff6200;
 $gray		  		: #c3c3c3;
 $gray-lighter		: #eceeef;
@@ -33,3 +34,19 @@ $spacer-xl	: 5rem;
 
 //- Border radius
 $border-radius:	.4rem;
+
+//- Grid (Width without padding)
+$container-width-sm: 510px;
+$container-width-md: 690px;
+$container-width-lg: 930px;
+$container-width-xl: 1110px;
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+$container-max-widths: (
+  sm: 1197px,
+  md: 1198px,
+  lg: 1199px,
+  xl: 1200px
+);

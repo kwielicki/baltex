@@ -225,7 +225,8 @@
                     }); //end $this.slick
 
                     $this.on('beforeChange', function(){
-                        $this.find(".slick-slide [data-fx]").each(function () {
+                        if ($('body').hasClass('css-animate')) {
+                            $this.find(".slick-slide [data-fx]").each(function () {
                                 var $content = $(this);
                                 $content.removeClass($content.data('fx')).removeClass("activate");
                             });
@@ -241,6 +242,7 @@
                                     }
                                 })
                             }, 150);
+                        }
                     });
                     if ($('[data-space]').length > 0) {
                         $('[data-space]').each(function () {

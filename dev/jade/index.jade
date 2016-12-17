@@ -1,15 +1,72 @@
 //- Document Head
 extends config/base
 block page_content
-	section
-		.component.main-slider.ct-js-slick(data-height="550", data-arrows="false", data-dots="true")
-			.item(data-background="http://pixel-industry.com/wordpress/trucking/wp-content/uploads/2015/10/slide01.jpg", data-background-position="50% 50%")
-				.container
-					.row
-						.col-xs-12
-							h2 Item 1
-			.item(data-background="http://www.drewnoplaneta.pl/wp-content/uploads/2014/03/Horizon-P4250076.jpg", data-background-position="50% 50%").main-slider__item.main-slider__item--overlayed
-				.container
-					.row
-						.col-xs-12
-							h2 Item 2
+	section.section.section--ghost
+		.component.main-slider(data-items="1", data-arrows="false", data-dots="true")
+			.item.main-slider__item(data-background="" + path_image + "slider-01.jpg", data-background-mobile="" + path_image + "slider-01.jpg",, data-thumb="Transport międzynarodowy")
+				.main-slider__inner
+					.container
+						.row
+							.col-xs-12
+								.main-slider__content.animated(data-fx="fadeIn", data-time="300")
+									h2.main-slider__title Posiadamy ponad 12 letnie doświadczenie w&nbsp;branży spedycyjnej
+									a(href="#", title="").btn.btn-lg.btn-second Czytaj więcej o spedycji
+			.item(data-background="" + path_image + "slider-02.jpg", data-background-mobile="" + path_image + "slider-02.jpg", data-thumb="Magazyn czasowego składowania").main-slider__item.main-slider__item--overlayed
+				.main-slider__inner
+					.container
+						.row
+							.col-xs-12
+								.main-slider__content.animated(data-fx="fadeIn", data-time="300")
+									h2.main-slider__title Cechuje nas&nbsp;doskonała znajomość problematyki celnej
+									a(href="#", title="").btn.btn-lg.btn-second Jak działa Naszmagazyn
+			.item(data-background="" + path_image + "slider-03.jpg", data-background-mobile="" + path_image + "slider-03.jpg", data-thumb="Sprzedaż suchej tarcicy dąb-sosna").main-slider__item.main-slider__item--overlayed
+				.main-slider__inner
+					.container
+						.row
+							.col-xs-12
+								.main-slider__content.animated(data-fx="fadeIn", data-time="300")
+									h2.main-slider__title Tarcica pochodzi wyłącznie z&nbsp;własnego przetarcia na&nbsp;nowoczesnych trakach 
+									a(href="#", title="").btn.btn-lg.btn-second Czym jest 
+	section.section
+		.container
+			.row
+				.col-xs-12
+					+section-header(
+						'Firma Bałtex',
+						'dowiedź się więcej o Naszej działalności',
+						'Prowadzimy swoją działalność od roku 1994. Pierwszą branżą był transport międzynarodowy. Z czasem firma ewoluowała i zaczęłą również inwestować w magazyn czasowego składowania. Od niedawna zajmujemy się również sprzedażą suchej tarcicy dąb - sosna.',
+						'01'
+					)
+			.row
+				.col-xs-12
+					.component.ct-js-slick.slick--centered(data-dots="true", data-centerMode="true", data-centerPadding="30px", data-LGitems="3", data-MDitems="2", data-SMitems="2", data-XSitems="1", data-speed="700", data-arrows="false", data-initialSlide="1", data-autoplay="true")
+						.item
+							.info-box
+								.info-box__inner
+									.info-box__image
+										img(src="" + path_image + "company-profile.jpg")
+									.info-box__content
+										h5.info-box__title Profil firmy
+										p.info-box__description Firma #[code Bałtex] prowadzi swoją działalność od roku 1994. Pierwszą branżą był transport międzynarodowy. Z czasem firma ewoluowała i zaczęłą również inwestować w magazyn czasowego składowania. Od niedawna zajmujemy się również sprzedażą suchej tarcicy dąb - sosna.
+						.item
+							.info-box
+								.info-box__inner
+									.info-box__image
+										img(src="" + path_image + "company-services.jpg")
+									.info-box__content
+										h5.info-box__title Nasze usługi
+										p.info-box__description Prosperujemy na niżej wymienionych rynkach:
+						.item
+							.info-box
+								.info-box__inner
+									.info-box__image
+										img(src="" + path_image + "company-contact.jpg")
+									.info-box__content
+										h5.info-box__title Informacje kontaktowe
+						.item
+							.info-box
+								.info-box__inner
+									.info-box__image
+										img(src="" + path_image + "company-share.jpg")
+									.info-box__content
+										h5.info-box__title Udostępnij stronę

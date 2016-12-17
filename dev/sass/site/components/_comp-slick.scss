@@ -1,0 +1,49 @@
+.slick--centered {
+	position: relative;
+	&:before, &:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 35px;
+		background-color: rgba(255,255,255,.8);
+		z-index: 1;
+		width: 15px;
+	}
+	&:before {
+		left: 0;
+	}
+	&:after {
+		right: 0;
+	}
+}
+
+//- Slick dots
+.ct-js-slick {
+	&:not(.main-slider) {
+		.slick-dots {
+			margin: $spacer-sm 0 0;
+			padding: 0;
+			text-align: right;
+			li {
+				display: inline-block;
+				width: 10px;
+				height: 10px;
+				margin: 0 5px;
+				button {
+					border-radius: 50%;
+					text-indent: -9999px;
+					width: 10px;
+					height: 10px;
+					border: 0;
+					margin: 0;
+					padding: 0;
+				}
+				&.slick-active {
+					button {
+						background-color: $brand-second;
+					}
+				}
+			}
+		}
+	}
+}
