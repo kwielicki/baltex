@@ -1,4 +1,4 @@
-navbar.component.nav-bar
+nav.component.nav-bar
 	.nav-bar__inner
 		.container
 			.row
@@ -17,6 +17,36 @@ navbar.component.nav-bar
 							li.nav-bar__hamburger
 								a.nav-bar__icon.js-hamburger(href="#", title="Menu głowne strony")
 									i.fa.fa-bars(aria-hidden="true")
+								.nav-bar__dropdown
+									ul.nav-bar__submenu.list-unstyled
+										li
+											a(href="#", title="Informacje kontaktowe")
+												i.fa.fa-envelope(aria-hidden="true")
+												span Kontakt
+										li
+											a(href="#", title="Wydrukuj stronę")
+												i.fa.fa-print(aria-hidden="true")
+												span Drukuj
+										li
+											a(href="#", title="Dodaj do ulubionych")
+												i.fa.fa-bookmark(aria-hidden="true")
+												span Ulubione
+									.nav-bar__divider
+										hr
+									ul.nav-bar__submenu.list-unstyled
+										li
+											a(href="#", title="Informacje kontaktowe")
+												i.fa.fa-envelope(aria-hidden="true")
+												span Galeria
+										li
+											a(href="#", title="Informacje kontaktowe")
+												i.fa.fa-envelope(aria-hidden="true")
+												span FAQ
+										li
+											a(href="#", title="Informacje kontaktowe")
+												i.fa.fa-envelope(aria-hidden="true")
+												span Opinie
+
 				.col-xs-12
 					.component.form-searcher
 						.form-searcher__inner

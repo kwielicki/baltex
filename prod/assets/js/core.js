@@ -237,6 +237,7 @@
          *
          * 1 - Navbar searcher
          * 2 - Main slider custom paging
+         * 3 - Hamburger menu
         */
 
         //- 1
@@ -280,6 +281,16 @@
             }, 150);
         });
 
+        // 3
+        $('.js-hamburger').on('click', function(evt) {
+            $('.nav-bar__dropdown').toggleClass('is-active');
+            if ($('.nav-bar__dropdown').hasClass('is-active')) {
+                $('.nav-bar__dropdown').fadeIn(400);
+            } else {
+                $('.nav-bar__dropdown').fadeOut(400);
+            }
+        });
+
 
 	}); //- Document on ready [end]
 
@@ -295,6 +306,10 @@
         if ($html.hasClass('mobile')) {
             $(".main-slider").find('.main-slider__title').equalheight();
         }
+
+        $(".nav-bar__dropdown").mCustomScrollbar({
+            theme:"minimal-dark"
+        });
 
 		$body.addClass('window-loaded');
 

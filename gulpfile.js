@@ -101,7 +101,8 @@ gulp.task('js-plugins', function() {
 		devJSPath + 'plugins/tooltipster/tooltipster.js',
 		devJSPath + 'plugins/cookies-policy/cookies-policy.js',
 		devJSPath + 'plugins/bootstrap/bs.util.js',
-		devJSPath + 'plugins/bootstrap/bs.modal.js'
+		devJSPath + 'plugins/bootstrap/bs.modal.js',
+		devJSPath + 'plugins/custom-scroll-bar/jquery.mCustomScrollbar.min.js'
 	])
 	.pipe(plumber())
 	.pipe(concat(pluginsJSConcat))

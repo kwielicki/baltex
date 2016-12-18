@@ -33,7 +33,7 @@
     </div>
     <div id="page-wrapper">
       <main id="content-wrapper" class="content-wrapper">
-        <navbar class="component nav-bar">
+        <nav class="component nav-bar">
           <div class="nav-bar__inner">
             <div class="container">
               <div class="row">
@@ -45,7 +45,23 @@
                     </div>
                     <ul class="nav-bar__nav list-unstyled">
                       <li class="nav-bar__search"><a href="#" title="Wyszukaj frazy na stronie" class="nav-bar__icon js-searcher"><i aria-hidden="true" class="fa fa-search"></i></a></li>
-                      <li class="nav-bar__hamburger"><a href="#" title="Menu głowne strony" class="nav-bar__icon js-hamburger"><i aria-hidden="true" class="fa fa-bars"></i></a></li>
+                      <li class="nav-bar__hamburger"><a href="#" title="Menu głowne strony" class="nav-bar__icon js-hamburger"><i aria-hidden="true" class="fa fa-bars"></i></a>
+                        <div class="nav-bar__dropdown">
+                          <ul class="nav-bar__submenu list-unstyled">
+                            <li><a href="#" title="Informacje kontaktowe"><i aria-hidden="true" class="fa fa-envelope"></i><span>Kontakt</span></a></li>
+                            <li><a href="#" title="Wydrukuj stronę"><i aria-hidden="true" class="fa fa-print"></i><span>Drukuj</span></a></li>
+                            <li><a href="#" title="Dodaj do ulubionych"><i aria-hidden="true" class="fa fa-bookmark"></i><span>Ulubione</span></a></li>
+                          </ul>
+                          <div class="nav-bar__divider">
+                            <hr>
+                          </div>
+                          <ul class="nav-bar__submenu list-unstyled">
+                            <li><a href="#" title="Informacje kontaktowe"><i aria-hidden="true" class="fa fa-envelope"></i><span>Galeria</span></a></li>
+                            <li><a href="#" title="Informacje kontaktowe"><i aria-hidden="true" class="fa fa-envelope"></i><span>FAQ</span></a></li>
+                            <li><a href="#" title="Informacje kontaktowe"><i aria-hidden="true" class="fa fa-envelope"></i><span>Opinie</span></a></li>
+                          </ul>
+                        </div>
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -66,7 +82,7 @@
               </div>
             </div>
           </div>
-        </navbar>
+        </nav>
         <div class="container">
           <div class="row">
             <div class="col-xs-12">

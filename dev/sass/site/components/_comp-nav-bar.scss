@@ -42,6 +42,7 @@
 		transform: translateY(-50%);
 		right: 0;
 		margin: 0;
+		z-index: 9;
 	}
 	&__icon {
 		position: relative;
@@ -50,30 +51,8 @@
 		padding: $spacer-xs;
 		background-color: $brand-second;
 		line-height: 1;
-		&:before {
-			@include transition;
-			content: '';
-			position: absolute;
-			width: 0;
-			height: 0;
-			border-style: solid;
-			border-width: 0 10px 15px 10px;
-			border-color: transparent transparent $gray-lighter transparent;
-			top: 100%;
-		    margin-top: 24px;
-		    left: 50%;
-		    transform: translateX(100%);
-		    opacity: 0;
-		    transition-delay: .1s;
-		}
-		&--active {
-			background-color: #fff;
-			color: $brand-second;
-			&:before {
-				opacity: 1;
-				transform: translateX(-50%);
-			}
-		}
+		width: 35px;
+		height: 35px;
 		&:hover {
 			background-color: #fff;
 			color: $brand-second;
@@ -82,8 +61,61 @@
 	&__search,
 	&__hamburger {
 		float: left;
+		position: relative;
 	}
 	&__search {
 		padding-right: $spacer-xs;
+	}
+	&__dropdown {
+		position: absolute;
+		display: none;
+		min-width: 320px;
+		max-height: 350px;
+		z-index: 9;
+		background-color: $gray-lighter;
+		top: 77px;
+		right: 100%;
+		margin-right: -35px;
+		border: 1px solid $brand-second;
+		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+	}
+	&__submenu {
+		@include clearfix;
+		padding: $spacer;
+		li {
+			float: left;
+			width: 50%;
+			padding: $spacer-xs 5px;
+			text-align: center;
+			i {
+				display: block;
+				margin: 0 auto;
+				font-size: $font-size-h1;
+				color: #fff;
+				padding: 10px 0 14px 0;
+			}
+			a {
+				display: block;
+				border: 1px solid $brand-second;
+				background-color: $brand-primary;
+				&:hover {
+					text-decoration: none;
+				}
+			}
+			span {
+				display: block;
+				padding-top: $spacer-xs;
+				color: #fff;
+				background-color: $brand-second;
+				padding: 5px;
+			}
+		}
+	}
+	&__divider {
+		width: 100%;
+		padding: 0 $spacer;
+		hr {
+			margin: 0;
+		}
 	}
 }
