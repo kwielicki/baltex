@@ -7,7 +7,7 @@
 	right: 0;
 	bottom: 0;
 	z-index: $zindex-modal;
-	background-color: rgba(231,230,229,.5);
+	background-color: rgba(231,230,229,1);
 	border-top: 1px solid #e2dddd;
 	padding: 25px 0;
 	&__inner {

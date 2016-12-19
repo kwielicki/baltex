@@ -10,6 +10,7 @@
 	pointer-events: none;
 	/* this may be overriden in JS for fixed position origins */
 	position: absolute;
+	max-width: 220px;
 }
 
 .tooltipster-box {
@@ -386,3 +387,6 @@ corresponds to the arrow we want to display */
 .tooltipster-sidetip.tooltipster-right .tooltipster-arrow-uncropped {
 	left: -10px;
 }
+
+/* Tooltipsted Light theme */
+.tooltipster-sidetip.light .tooltipster-box{border-radius:3px;border:1px solid $gray;background:#fff}.tooltipster-sidetip.light .tooltipster-content{color: $brand-primary; text-align: center;}.tooltipster-sidetip.light .tooltipster-arrow{height:9px;margin-left:-9px;width:18px}.tooltipster-sidetip.light.tooltipster-left .tooltipster-arrow,.tooltipster-sidetip.light.tooltipster-right .tooltipster-arrow{height:18px;margin-left:0;margin-top:-9px;width:9px}.tooltipster-sidetip.light .tooltipster-arrow-background{border:9px solid transparent}.tooltipster-sidetip.light.tooltipster-bottom .tooltipster-arrow-background{border-bottom-color: $gray ;top:1px}.tooltipster-sidetip.light.tooltipster-left .tooltipster-arrow-background{border-left-color: #fff;left:-1px}.tooltipster-sidetip.light.tooltipster-right .tooltipster-arrow-background{border-right-color: $gray;left:1px}.tooltipster-sidetip.light.tooltipster-top .tooltipster-arrow-background{border-top-color: $gray;top:-1px}.tooltipster-sidetip.light .tooltipster-arrow-border{border:9px solid transparent}.tooltipster-sidetip.light.tooltipster-bottom .tooltipster-arrow-border{border-bottom-color: $gray}.tooltipster-sidetip.light.tooltipster-left .tooltipster-arrow-border{border-left-color: $gray}.tooltipster-sidetip.light.tooltipster-right .tooltipster-arrow-border{border-right-color: $gray}.tooltipster-sidetip.light.tooltipster-top .tooltipster-arrow-border{border-top-color: $gray}.tooltipster-sidetip.light.tooltipster-bottom .tooltipster-arrow-uncropped{top:-9px}.tooltipster-sidetip.light.tooltipster-right .tooltipster-arrow-uncropped{left:-9px}

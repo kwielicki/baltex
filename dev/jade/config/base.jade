@@ -21,13 +21,18 @@ html()&attributes({
         meta(http-equiv='X-UA-Compatible' content='IE=edge')
         meta(name='viewport' content='width=device-width initial-scale=1')
         meta(name='format-detection' content='telephone=no')
-        
+        meta(property="og:url" content="http://www.your-domain.com/your-page.html")
+        meta(property="og:type" content="website")
+        meta(property="og:title" content=page_title)
+        meta(property="og:description" content=page_description)
+        meta(property="og:image" content=page_image)
         title= page_title
         script(src="https://use.fontawesome.com/60998be330.js")
         link(rel='shortcut icon' href=path_image + 'favicon.ico')
         link(rel='apple-touch-icon' href=path_image + 'favicon.png')
         link(rel='stylesheet' href=path_css + 'style.min.css')
     body()&attributes({'class': body_classes})
+        include ../includes/socials-side-bar
         //- Google Analitics
         if google_analitics
             include ../includes/google-analitics

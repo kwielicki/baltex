@@ -76,7 +76,7 @@
         if (options['minHeight'] === true){
             $this.css('min-height', maxValue + "px");
         }
-    };  
+    };
 
     $(document).on('ready', function() {
 
@@ -99,7 +99,22 @@
 
         /** Tooltipster **/
             $('.tooltipster').tooltipster({
-                delay: 50
+                delay: 50,
+                theme: 'light',
+                functionInit: function(instance, helper){
+
+                    var $origin = $(helper.origin),
+                        dataOptions = $origin.attr('data-tooltipster');
+
+                    if(dataOptions){
+
+                        dataOptions = JSON.parse(dataOptions);
+
+                        $.each(dataOptions, function(name, option){
+                            instance.option(name, option);
+                        });
+                    }
+                }
             });
 
         /** Page scroller **/
@@ -221,23 +236,26 @@
             $('a[href]').each(function() {
                 var $this    = $(this),
                     attrHref = $this.attr('href');
-                
+
                 $this.attr('data-rewrite-mode', attrHref + ".html");
 
                 var modeRewiteText = $this.attr('data-rewrite-mode');
                 console.log(modeRewiteText);
                 $this.attr('href', modeRewiteText);
                 $this.attr('data-rewrite-mode', attrHref);
-            }); 
+            });
         }
 
-        /* 
+        /*
          * JAVASCRIPT CODE FOR SITE BALTEX
          * *******************************
          *
          * 1 - Navbar searcher
          * 2 - Main slider custom paging
          * 3 - Hamburger menu
+         * 4 - Drukowanie widoku
+         * 5 - Dodanie strony do ulubionych
+         * 6 - Social media - udostępnianie strony
         */
 
         //- 1
@@ -291,24 +309,85 @@
             }
         });
 
+        // 4
+        $('.js-window-print').on('click', function(evt) {
+            window.print();
+            evt.preventDefault();
+        })
+
+        // 5
+        $('.js-bookmark-application').on('click', function(e) {
+            var bookmarkURL = window.location.href;
+            var bookmarkTitle = document.title;
+            if ('addToHomescreen' in window && addToHomescreen.isCompatible) {
+                  // Mobile browsers
+                    addToHomescreen({ autostart: false, startDelay: 0 }).show(true);
+                } else if (window.sidebar && window.sidebar.addPanel) {
+                // Firefox <=22
+                window.sidebar.addPanel(bookmarkTitle, bookmarkURL, '');
+                } else if ((window.sidebar && /Firefox/i.test(navigator.userAgent)) || (window.opera && window.print)) {
+                    // Firefox 23+ and Opera <=14
+                    $(this).attr({
+                        href: bookmarkURL,
+                        title: bookmarkTitle,
+                        rel: 'sidebar'
+                    }).off(e);
+                    return true;
+                } else if (window.external && ('AddFavorite' in window.external)) {
+                    // IE Favorites
+                    window.external.AddFavorite(bookmarkURL, bookmarkTitle);
+                } else {
+                    // Other browsers (mainly WebKit & Blink - Safari, Chrome, Opera 15+)
+                    alert('Press ' + (/Mac/i.test(navigator.userAgent) ? 'Cmd' : 'Ctrl') + '+D to bookmark this page.');
+                }
+            return false;
+        })
+
+        // 6
+        $('meta[property="og:url"]').attr('content', window.location.href);
+        $('.social-bar__anchor--fb').on('click', function(event){
+            var locationHref = window.location.href;
+            window.open('http://www.facebook.com/sharer.php?u='+ encodeURIComponent(locationHref), '', 'width=481, height=481');
+            event.preventDefault;
+            return false;
+        });
+        $('.social-bar__anchor--tw').on('click', function(event){
+        	window.open("https://twitter.com/share?url="+window.location.href + "&text" + "DemoText",'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');
+            event.preventDefault;
+            return false;
+        });
+        $('.social-bar__anchor--gp').on('click', function(event){
+            var that = $(this);
+            var anchorHref = that.attr('href');
+            that.attr('href', anchorHref + window.location.href);
+          	window.open(this.href,'', 	 'menubar=yes,toolbar=yes,resizable=yes,scrollbars=yes,height=600,width=600');
+            event.preventDefault;
+            that.attr('href', anchorHref);
+            return false;
+        });
+
 
 	}); //- Document on ready [end]
 
 	$(window).on('load', function() {
 
-        /* 
+        /*
          * JAVASCRIPT CODE FOR SITE BALTEX
          * *******************************
          * 1 - Synchronizacja wysokośći tytułu dla głownej karuzeli
-         * 
+         * 2 - NavBar dropdown - użycie mCustomScrollbar
+         *
         */
 
+        // 1
         if ($html.hasClass('mobile')) {
             $(".main-slider").find('.main-slider__title').equalheight();
         }
 
+        // 2
         $(".nav-bar__dropdown").mCustomScrollbar({
-            theme:"minimal-dark"
+            theme:"minimal-dark",
+            scrollInertia: 300
         });
 
 		$body.addClass('window-loaded');
@@ -336,18 +415,18 @@
 
     $(window).on('resizeend', function() {
 
-        /* 
+        /*
          * JAVASCRIPT CODE FOR SITE BALTEX
          * *******************************
          * 1 - Synchronizacja wysokośći tytułu dla głownej karuzeli
-         * 
+         *
         */
 
         if ($html.hasClass('mobile')) {
             $(".main-slider").find('.main-slider__title').equalheight();
         }
 
-        
+
     }); //- window on resize [end]
 
 }(jQuery))

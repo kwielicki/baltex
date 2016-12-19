@@ -71,3 +71,17 @@ block page_content
 									.info-box__content
 										h5.info-box__title Udostępnij stronę
 										i.fa.fa-bookmark(aria-hidden="true")
+	section.section.section--pattern.section--full
+		.container
+			.row
+				.col-xs-12
+					+section-header(
+						'Co w trawie piszczy',
+						'sprawdź co sądzą o Nas inni',
+						'Prowadzimy swoją działalność od roku 1994. Pierwszą branżą był transport międzynarodowy. Z czasem firma ewoluowała i zaczęłą również inwestować w magazyn czasowego składowania. Od niedawna zajmujemy się również sprzedażą suchej tarcicy dąb - sosna.',
+						'02'
+					)
+				.col-xs-12
+					.animated-canvas
+						img(src="" + path_image + "notebook-v-svg.png", alt, class="animated-canvas__image")
+						canvas(id="hand-animation" width="323" height="518")
