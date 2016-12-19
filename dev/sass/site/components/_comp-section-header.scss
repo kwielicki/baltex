@@ -8,6 +8,10 @@
 	    line-height: 1;
 		text-transform: uppercase;
 	    opacity: .15;
+	    @include media-breakpoint-down(sm) {
+	    	font-size: $font-size-h3;
+	    	text-transform: capitalize;
+	    }
 	    &:after {
 	    	content: '';
 	    	position: absolute;
@@ -20,6 +24,9 @@
 			background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
 			background: linear-gradient(to top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+	    	@include media-breakpoint-down(sm) {
+	    		display: none;
+	    	}
 	    }
 	}
 	&__subtitle {
@@ -28,6 +35,10 @@
     	text-transform: uppercase;
 	    margin-top: -10px;
     	padding-bottom: $spacer-sm;
+    	@include media-breakpoint-down(sm) {
+	    	font-size: $font-size-h5;
+	    	text-transform: lowercase;
+	    }
     	&:after {
     		content: '';
 		    width: 50px;
@@ -46,5 +57,8 @@
 			font-weight: 300;
 			font-size: $font-size-h6;
 		}
+		@include media-breakpoint-down(sm) {
+	    	text-align: justify;
+	    }
 	}
 }

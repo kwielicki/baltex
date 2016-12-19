@@ -71,7 +71,7 @@ block page_content
 									.info-box__content
 										h5.info-box__title Udostępnij stronę
 										i.fa.fa-bookmark(aria-hidden="true")
-	section.section.section--pattern.section--full
+	section.section.section--pattern.section--bottom0
 		.container
 			.row
 				.col-xs-12
@@ -85,3 +85,39 @@ block page_content
 					.animated-canvas
 						img(src="" + path_image + "notebook-v-svg.png", alt, class="animated-canvas__image")
 						canvas(id="hand-animation" width="323" height="518")
+	section.section.section--motive
+		.container
+			.row
+				.col-xs-12
+					header.text-xs-center.text-white
+						h3 Piszą..., a Ty czytaj
+						h4 Różne rzeczy, czasem lepsze, czasem 
+						p &nbsp;
+			.row
+				.col-xs-12
+					.ct-js-slick(data-MDitems="2", data-SMitems="2", data-XSitems="1",data-dots="true", data-centerPadding="30px", data-arrows="false", data-infinite="false")
+						.item
+							.component.feature-box
+								blockquote.feature-box__blockquote
+									i.fa.fa-quote-left.feature-box__quote.feature-box__quote--top
+									| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque volutpat ex eget nunc facilisis, vitae posuere ligula ultricies. Mauris fringilla mi quis nisi iaculis accumsan. Phasellus eu nisi viverra nunc ultrices rhoncus ut at dui.
+									i.fa.fa-quote-right.feature-box__quote.feature-box__quote--bottom
+								h5.feature-box__title Jan Kasprzak
+								p.feature-box__description Korzystałem z usług firmy Pana Andrzeja
+						.item
+							.component.feature-box
+								blockquote.feature-box__blockquote
+									i.fa.fa-quote-left.feature-box__quote.feature-box__quote--top
+									| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque volutpat ex eget nunc facilisis, vitae posuere ligula ultricies. Mauris fringilla mi quis nisi iaculis accumsan. Phasellus eu nisi viverra nunc ultrices rhoncus ut at dui.
+									i.fa.fa-quote-right.feature-box__quote.feature-box__quote--bottom
+								h5.feature-box__title Tadeusz Zalewski
+								p.feature-box__description Korzystałem z usług firmy Pana Andrzeja
+						.item
+							.component.feature-box
+								blockquote.feature-box__blockquote
+									i.fa.fa-quote-left.feature-box__quote.feature-box__quote--top
+									| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque volutpat ex eget nunc facilisis, vitae posuere ligula ultricies. Mauris fringilla mi quis nisi iaculis accumsan. Phasellus eu nisi viverra nunc ultrices rhoncus ut at dui. 
+									i.fa.fa-quote-right.feature-box__quote.feature-box__quote--bottom
+								h5.feature-box__title Zbigniew Kaczor
+								p.feature-box__description Korzystałem z usług firmy Pana Andrzeja
+						

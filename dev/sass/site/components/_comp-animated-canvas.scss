@@ -1,7 +1,14 @@
 .animated-canvas {
-    &__image {
-        display: block;
-        max-width: 609px;
-        margin: 0 auto;
+	display: block;
+    max-width: 609px;
+    margin: 0 auto;
+    position: relative;
+    canvas {
+    	position: absolute;
+    	width: 25% !important;
+    	height: inherit !important;
+    	left: 50%;
+    	transform: translateX(-50%);
+    	bottom: 0;
     }
 }

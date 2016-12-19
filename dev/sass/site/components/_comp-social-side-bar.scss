@@ -3,12 +3,17 @@
     right: 0;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 9;
+    @include media-breakpoint-down(sm) {
+        display: none;
+    }
     &__list {
         margin: 0;
         border-radius: $border-radius;
         border-bottom-right-radius: 0;
         border-top-right-radius: 0;
         box-shadow: 0 0 0 4px #fff, 0 6px 4px $brand-primary;
+        background-color: #fff;
     }
     &__element {
         display: block;
