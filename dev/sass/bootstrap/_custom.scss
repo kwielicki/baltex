@@ -23,14 +23,14 @@ $brand-primary-light: #494f54;
 $blue-dark			: #405e74;
 $brand-second		: #ff6200;
 $gray		  		: #c3c3c3;
-$gray-lighter		: #eceeef;
+$gray-lighter		: #ebebeb;
 
 //- Spacers
 $spacer-xs	: 1rem;
 $spacer-sm	: 2rem;
 $spacer		: 3rem;
 $spacer-md	: 4rem;
-$spacer-xl	: 5rem;
+$spacer-xl	: 7rem;
 
 //- Border radius
 $border-radius:	.4rem;
@@ -50,3 +50,5 @@ $container-max-widths: (
   lg: 1199px,
   xl: 1200px
 );
+
+$secion-max-width: 1700px;

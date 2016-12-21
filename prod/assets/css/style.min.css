@@ -544,7 +544,7 @@ mark,
   padding: 1.5rem 3rem;
   margin-bottom: 3rem;
   font-size: 2rem;
-  border-left: 0.25rem solid #eceeef; }
+  border-left: 0.25rem solid #ebebeb; }
 
 .blockquote-footer {
   display: block;
@@ -557,7 +557,7 @@ mark,
   padding-right: 3rem;
   padding-left: 0;
   text-align: right;
-  border-right: 0.25rem solid #eceeef;
+  border-right: 0.25rem solid #ebebeb;
   border-left: 0; }
 
 .blockquote-reverse .blockquote-footer::before {
@@ -1337,12 +1337,12 @@ pre {
   .table td {
     padding: 0.75rem;
     vertical-align: top;
-    border-top: 1px solid #eceeef; }
+    border-top: 1px solid #ebebeb; }
   .table thead th {
     vertical-align: bottom;
-    border-bottom: 2px solid #eceeef; }
+    border-bottom: 2px solid #ebebeb; }
   .table tbody + tbody {
-    border-top: 2px solid #eceeef; }
+    border-top: 2px solid #ebebeb; }
   .table .table {
     background-color: #fff; }
 
@@ -1351,10 +1351,10 @@ pre {
   padding: 0.3rem; }
 
 .table-bordered {
-  border: 1px solid #eceeef; }
+  border: 1px solid #ebebeb; }
   .table-bordered th,
   .table-bordered td {
-    border: 1px solid #eceeef; }
+    border: 1px solid #ebebeb; }
   .table-bordered thead th,
   .table-bordered thead td {
     border-bottom-width: 2px; }
@@ -1426,10 +1426,10 @@ pre {
 
 .thead-default th {
   color: #c3c3c3;
-  background-color: #eceeef; }
+  background-color: #ebebeb; }
 
 .table-inverse {
-  color: #eceeef;
+  color: #ebebeb;
   background-color: #373a3c; }
   .table-inverse th,
   .table-inverse td,
@@ -1453,11 +1453,11 @@ pre {
 
 .table-reflow th,
 .table-reflow td {
-  border-top: 1px solid #eceeef;
-  border-left: 1px solid #eceeef; }
+  border-top: 1px solid #ebebeb;
+  border-left: 1px solid #ebebeb; }
   .table-reflow th:last-child,
   .table-reflow td:last-child {
-    border-right: 1px solid #eceeef; }
+    border-right: 1px solid #ebebeb; }
 
 .table-reflow thead:last-child tr:last-child th,
 .table-reflow thead:last-child tr:last-child td,
@@ -1465,14 +1465,14 @@ pre {
 .table-reflow tbody:last-child tr:last-child td,
 .table-reflow tfoot:last-child tr:last-child th,
 .table-reflow tfoot:last-child tr:last-child td {
-  border-bottom: 1px solid #eceeef; }
+  border-bottom: 1px solid #ebebeb; }
 
 .table-reflow tr {
   float: left; }
   .table-reflow tr th,
   .table-reflow tr td {
     display: block !important;
-    border: 1px solid #eceeef; }
+    border: 1px solid #ebebeb; }
 
 .form-control {
   display: block;
@@ -1507,7 +1507,7 @@ pre {
     color: #999;
     opacity: 1; }
   .form-control:disabled, .form-control[readonly] {
-    background-color: #eceeef;
+    background-color: #ebebeb;
     opacity: 1; }
   .form-control:disabled {
     cursor: not-allowed; }
@@ -2512,7 +2512,7 @@ tbody.collapse.in {
   line-height: 1.25;
   color: #c3c3c3;
   text-align: center;
-  background-color: #eceeef;
+  background-color: #ebebeb;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0.4rem; }
   .input-group-addon.form-control-sm,
@@ -2670,7 +2670,7 @@ tbody.collapse.in {
   .custom-select:disabled {
     color: #818a91;
     cursor: not-allowed;
-    background-color: #eceeef; }
+    background-color: #ebebeb; }
   .custom-select::-ms-expand {
     opacity: 0; }
 
@@ -2770,7 +2770,7 @@ tbody.collapse.in {
     border-top-right-radius: 0.4rem;
     border-top-left-radius: 0.4rem; }
     .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
-      border-color: #eceeef #eceeef #ddd; }
+      border-color: #ebebeb #ebebeb #ddd; }
     .nav-tabs .nav-link.disabled, .nav-tabs .nav-link.disabled:focus, .nav-tabs .nav-link.disabled:hover {
       color: #818a91;
       background-color: transparent;
@@ -3367,7 +3367,7 @@ tbody.collapse.in {
   padding: 0.75rem 1rem;
   margin-bottom: 3rem;
   list-style: none;
-  background-color: #eceeef;
+  background-color: #ebebeb;
   border-radius: 0.4rem; }
   .breadcrumb::after {
     content: "";
@@ -3429,7 +3429,7 @@ tbody.collapse.in {
   border: 1px solid #ddd; }
   .page-link:focus, .page-link:hover {
     color: #030405;
-    background-color: #eceeef;
+    background-color: #ebebeb;
     border-color: #ddd; }
 
 .pagination-lg .page-link {
@@ -3517,14 +3517,14 @@ a.tag:focus, a.tag:hover {
 .jumbotron {
   padding: 2rem 1rem;
   margin-bottom: 2rem;
-  background-color: #eceeef;
+  background-color: #ebebeb;
   border-radius: 0.3rem; }
   @media (min-width: 576px) {
     .jumbotron {
       padding: 4rem 2rem; } }
 
 .jumbotron-hr {
-  border-top-color: #d0d5d8; }
+  border-top-color: #d2d2d2; }
 
 .jumbotron-fluid {
   padding-right: 0;
@@ -3801,7 +3801,7 @@ base::-moz-progress-bar,
   .list-group-item.disabled, .list-group-item.disabled:focus, .list-group-item.disabled:hover {
     color: #818a91;
     cursor: not-allowed;
-    background-color: #eceeef; }
+    background-color: #ebebeb; }
     .list-group-item.disabled .list-group-item-heading, .list-group-item.disabled:focus .list-group-item-heading, .list-group-item.disabled:hover .list-group-item-heading {
       color: inherit; }
     .list-group-item.disabled .list-group-item-text, .list-group-item.disabled:focus .list-group-item-text, .list-group-item.disabled:hover .list-group-item-text {
@@ -6486,8 +6486,8 @@ yx-axis
 .mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerRail,
 .mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger_bar,
 .mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerRail {
-  -webkit-transition: width .2s ease-out .2s, height .2s ease-out .2s,  margin-left .2s ease-out .2s, margin-right .2s ease-out .2s,  margin-top .2s ease-out .2s, margin-bottom .2s ease-out .2s, opacity .2s ease-in-out, background-color .2s ease-in-out;
-  transition: width .2s ease-out .2s, height .2s ease-out .2s,  margin-left .2s ease-out .2s, margin-right .2s ease-out .2s,  margin-top .2s ease-out .2s, margin-bottom .2s ease-out .2s, opacity .2s ease-in-out, background-color .2s ease-in-out; }
+  -webkit-transition: width .2s ease-out .2s, height .2s ease-out .2s,  margin-left .2s ease-out .2s, margin-right .2s ease-out .2s,  margin-top .2s ease-out .2s, margin-bottom .2s ease-out .2s, opacity .2s ease-in-out, background-color .2s ease-in-out;
+  transition: width .2s ease-out .2s, height .2s ease-out .2s,  margin-left .2s ease-out .2s, margin-right .2s ease-out .2s,  margin-top .2s ease-out .2s, margin-bottom .2s ease-out .2s, opacity .2s ease-in-out, background-color .2s ease-in-out; }
 
 /* 
 ------------------------------------------------------------------------------------------------------------------------
@@ -7547,6 +7547,27 @@ yx-axis
 a {
   -webkit-transition: all 250ms cubic-bezier(0.55, 0, 0.1, 1) 0s;
   transition: all 250ms cubic-bezier(0.55, 0, 0.1, 1) 0s; }
+  a.link {
+    -webkit-transition: all 250ms cubic-bezier(0.55, 0, 0.1, 1) 0s;
+    transition: all 250ms cubic-bezier(0.55, 0, 0.1, 1) 0s;
+    display: inline-block;
+    position: relative; }
+    a.link:after {
+      -webkit-transition: all 250ms cubic-bezier(0.55, 0, 0.1, 1) 0s;
+      transition: all 250ms cubic-bezier(0.55, 0, 0.1, 1) 0s;
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      height: 1px;
+      width: 100%;
+      background-color: #ebebeb; }
+    a.link:hover {
+      color: #212a34; }
+      a.link:hover:after {
+        background-color: #212a34; }
+  a:active, a:focus, a:hover {
+    text-decoration: none; }
 
 code {
   background-color: #ff6200;
@@ -7557,8 +7578,8 @@ code {
     padding-top: 71px; } }
 
 .section {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
   max-width: 1700px;
   margin: 0 auto; }
   .section--ghost {
@@ -7567,7 +7588,7 @@ code {
     background-image: url(../../assets/images/section-background.png);
     background-repeat: repeat;
     background-size: 15px 15px;
-    border-top: 2px solid #eceeef; }
+    border-top: 2px solid #ebebeb; }
   .section--full {
     max-width: 100%; }
   .section--motive {
@@ -10037,7 +10058,7 @@ Copyright (c) 2015 Daniel Eden
     min-width: 320px;
     max-height: 350px;
     z-index: 9;
-    background-color: #eceeef;
+    background-color: #ebebeb;
     top: 77px;
     right: 100%;
     margin-right: -35px;
@@ -10080,8 +10101,8 @@ Copyright (c) 2015 Daniel Eden
 
 .form-searcher {
   display: none;
-  background-color: #eceeef;
-  padding: 5rem;
+  background-color: #ebebeb;
+  padding: 7rem;
   border-bottom: 3px solid #ff6200; }
   .form-searcher .form-group {
     margin-bottom: 0;
@@ -10268,7 +10289,7 @@ Copyright (c) 2015 Daniel Eden
 
 .section-header {
   text-align: center;
-  margin-bottom: 5rem; }
+  margin-bottom: 7rem; }
   .section-header__title {
     position: relative;
     color: #212a34;
@@ -10470,7 +10491,7 @@ Copyright (c) 2015 Daniel Eden
       border-width: 30px 25px 0 0;
       border-color: #ff6200 transparent transparent transparent; }
   .feature-box__title {
-    color: #eceeef;
+    color: #ebebeb;
     margin-bottom: 1rem;
     padding-top: 3rem; }
   .feature-box__description {
@@ -10487,7 +10508,37 @@ Copyright (c) 2015 Daniel Eden
       bottom: 5px; }
 
 .footer {
-  padding: 5rem 0;
-  background-color: #f9f9f9; }
+  padding: 7rem 0; }
+
+.footer-post {
+  max-width: 1700px;
+  margin: 0 auto;
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb; }
+  .footer-post__inner {
+    display: table;
+    width: 100%;
+    padding: 2rem 0; }
+  .footer-post__brand, .footer-post__list {
+    display: table-cell;
+    width: 50%;
+    vertical-align: middle; }
+  .footer-post__logo {
+    margin: 0;
+    font-weight: 300; }
+  .footer-post__list {
+    text-align: right; }
+    .footer-post__list ul {
+      margin: 0; }
+  .footer-post__element {
+    display: inline-block;
+    line-height: 1;
+    padding: 0 10px;
+    border-right: 1px solid #ebebeb; }
+    .footer-post__element:last-child {
+      padding-right: 0;
+      border: 0; }
+  .footer-post__anchor {
+    font-weight: 300; }
 
 /*# sourceMappingURL=style.min.css.map */

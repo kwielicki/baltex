@@ -1,4 +1,43 @@
 .footer {
 	padding: $spacer-xl 0;
-	background-color: #f9f9f9;
+}
+.footer-post {
+	max-width: $secion-max-width;
+	margin: 0 auto;
+	border-top: 1px solid $gray-lighter;
+	border-bottom: 1px solid $gray-lighter;
+	&__inner {
+		display: table;
+		width: 100%;
+		padding: $spacer-sm 0;
+	}
+	&__brand,
+	&__list {
+		display: table-cell;
+		width: 50%;
+		vertical-align: middle;
+	}
+	&__logo {
+		margin: 0;
+		font-weight: 300;
+	}
+	&__list {
+		text-align: right;
+		ul {
+			margin: 0;
+		}
+	}
+	&__element {
+		display: inline-block;
+		line-height: 1;
+		padding: 0 10px;
+		border-right: 1px solid $gray-lighter;
+		&:last-child {
+			padding-right: 0;
+			border: 0;
+		}
+	}
+	&__anchor {
+		font-weight: 300;
+	}
 }

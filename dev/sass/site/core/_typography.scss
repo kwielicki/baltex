@@ -5,6 +5,30 @@
 }
 a {
 	@include transition;
+	&.link {
+		@include transition;
+		display: inline-block;
+		position: relative;
+		&:after {
+			@include transition;
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: -4px;
+			height: 1px;
+			width: 100%;
+			background-color: $gray-lighter;
+		}
+		&:hover {
+			color: $brand-primary;
+			&:after {
+				background-color: $brand-primary;
+			}
+		}
+	}
+	&:active, &:focus, &:hover {
+		text-decoration: none;
+	}
 }
 
 code {
