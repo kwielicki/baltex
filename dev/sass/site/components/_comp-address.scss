@@ -1,0 +1,26 @@
+.address {
+	&__item {
+		code {
+			font-size: $font-size-lg;
+			border-bottom-right-radius: 0;
+			border-bottom-left-radius: 0;
+		}
+		span, a {
+			display: block;
+			font-size: $font-size-lg;
+			border: 1px solid $gray-lighter;
+			border-radius: $border-radius;
+			border-top-left-radius: 0;
+			border-top-right-radius: 0;
+			padding: $spacer-xs;
+			&:hover {
+				background-color: $brand-second;
+				border-color: $brand-second;
+				color: #fff;
+			}
+		}
+		& + #{&} {
+			padding-top: $spacer-xs;
+		}
+	}
+}

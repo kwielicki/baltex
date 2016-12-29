@@ -1531,7 +1531,7 @@ select.form-control:focus::-ms-value {
 .col-form-label-lg {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  font-size: 1.25rem; }
+  font-size: 1.4rem; }
 
 .col-form-label-sm {
   padding-top: 0.25rem;
@@ -1574,13 +1574,13 @@ select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.for
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn {
   padding: 0.75rem 1.5rem;
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   border-radius: 0.3rem; }
 
 select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.form-control:not([size]):not([multiple]),
 .input-group-lg > select.input-group-addon:not([size]):not([multiple]),
 .input-group-lg > .input-group-btn > select.btn:not([size]):not([multiple]) {
-  height: 3.16667rem; }
+  height: 3.36667rem; }
 
 .form-group {
   margin-bottom: 3rem; }
@@ -2158,7 +2158,7 @@ fieldset[disabled] a.btn {
 
 .btn-lg, .btn-group-lg > .btn {
   padding: 0.75rem 1.5rem;
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   border-radius: 0.3rem; }
 
 .btn-sm, .btn-group-sm > .btn {
@@ -2525,7 +2525,7 @@ tbody.collapse.in {
   .input-group-lg > .input-group-addon,
   .input-group-lg > .input-group-btn > .input-group-addon.btn {
     padding: 0.75rem 1.5rem;
-    font-size: 1.25rem;
+    font-size: 1.4rem;
     border-radius: 0.3rem; }
   .input-group-addon input[type="radio"],
   .input-group-addon input[type="checkbox"] {
@@ -2872,7 +2872,7 @@ tbody.collapse.in {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   margin-right: 1rem;
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   line-height: inherit; }
   .navbar-brand:focus, .navbar-brand:hover {
     text-decoration: none; }
@@ -2897,7 +2897,7 @@ tbody.collapse.in {
   width: 2.5em;
   height: 2em;
   padding: 0.5rem 0.75rem;
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   line-height: 1;
   background: transparent no-repeat center center;
   background-size: 24px 24px;
@@ -3434,7 +3434,7 @@ tbody.collapse.in {
 
 .pagination-lg .page-link {
   padding: 0.75rem 1.5rem;
-  font-size: 1.25rem; }
+  font-size: 1.4rem; }
 
 .pagination-lg .page-item:first-child .page-link {
   border-bottom-left-radius: 0.3rem;
@@ -6486,8 +6486,8 @@ yx-axis
 .mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerRail,
 .mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger_bar,
 .mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerRail {
-  -webkit-transition: width .2s ease-out .2s, height .2s ease-out .2s,  margin-left .2s ease-out .2s, margin-right .2s ease-out .2s,  margin-top .2s ease-out .2s, margin-bottom .2s ease-out .2s, opacity .2s ease-in-out, background-color .2s ease-in-out;
-  transition: width .2s ease-out .2s, height .2s ease-out .2s,  margin-left .2s ease-out .2s, margin-right .2s ease-out .2s,  margin-top .2s ease-out .2s, margin-bottom .2s ease-out .2s, opacity .2s ease-in-out, background-color .2s ease-in-out; }
+  -webkit-transition: width .2s ease-out .2s, height .2s ease-out .2s,  margin-left .2s ease-out .2s, margin-right .2s ease-out .2s,  margin-top .2s ease-out .2s, margin-bottom .2s ease-out .2s, opacity .2s ease-in-out, background-color .2s ease-in-out;
+  transition: width .2s ease-out .2s, height .2s ease-out .2s,  margin-left .2s ease-out .2s, margin-right .2s ease-out .2s,  margin-top .2s ease-out .2s, margin-bottom .2s ease-out .2s, opacity .2s ease-in-out, background-color .2s ease-in-out; }
 
 /* 
 ------------------------------------------------------------------------------------------------------------------------
@@ -10052,52 +10052,117 @@ Copyright (c) 2015 Daniel Eden
     @media (max-width: 767px) {
       .nav-bar__search {
         display: none; } }
-  .nav-bar__dropdown {
-    position: absolute;
-    display: none;
-    min-width: 320px;
-    max-height: 350px;
-    z-index: 9;
-    background-color: #ebebeb;
-    top: 77px;
-    right: 100%;
-    margin-right: -35px;
-    border: 1px solid #ff6200;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); }
-  .nav-bar__submenu {
-    padding: 3rem; }
-    .nav-bar__submenu::after {
-      content: "";
-      display: table;
-      clear: both; }
-    .nav-bar__submenu li {
-      float: left;
-      width: 50%;
-      padding: 1rem 5px;
-      text-align: center; }
-      .nav-bar__submenu li i {
-        display: block;
-        margin: 0 auto;
-        font-size: 4.5rem;
-        color: #fff;
-        padding: 10px 0 14px 0; }
-      .nav-bar__submenu li a {
-        display: block;
-        border: 1px solid #ff6200;
-        background-color: #212a34; }
-        .nav-bar__submenu li a:hover {
-          text-decoration: none; }
-      .nav-bar__submenu li span {
-        display: block;
-        padding-top: 1rem;
-        color: #fff;
-        background-color: #ff6200;
-        padding: 5px; }
-  .nav-bar__divider {
-    width: 100%;
-    padding: 0 3rem; }
-    .nav-bar__divider hr {
-      margin: 0; }
+
+.sidebar-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  background: #fff;
+  margin: 0;
+  padding: 4rem 0 1rem 0;
+  -webkit-transform: translateY(-172px);
+  transform: translateY(-172px);
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+  background-color: #ebebeb; }
+  .sidebar-menu::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .sidebar-menu li {
+    float: left;
+    padding: 0 1rem;
+    min-width: 320px; }
+    .sidebar-menu li a {
+      position: relative;
+      display: block;
+      background-color: #e8e8e8;
+      padding: 2rem;
+      border: 2px solid #e8e8e8;
+      border-left: 4px solid #ff6200;
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+      box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
+      padding-right: 2rem; }
+      .sidebar-menu li a:hover .sidebar-menu__subtitle {
+        color: #212a34; }
+      .sidebar-menu li a:hover:before {
+        color: #212a34; }
+      .sidebar-menu li a:after {
+        content: '';
+        position: absolute;
+        right: -1px;
+        top: -1px;
+        bottom: -1px;
+        width: 3rem;
+        background-color: #f5f5f5; }
+      .sidebar-menu li a:before {
+        -webkit-transition: all 250ms cubic-bezier(0.55, 0, 0.1, 1) 0s;
+        transition: all 250ms cubic-bezier(0.55, 0, 0.1, 1) 0s;
+        content: "\f054";
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: inherit;
+        color: #dbdcdd;
+        font-size: 15px;
+        position: absolute;
+        top: 50%;
+        right: 6px;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        z-index: 1;
+        line-height: 1; }
+  .sidebar-menu__subtitle {
+    -webkit-transition: all 250ms cubic-bezier(0.55, 0, 0.1, 1) 0s;
+    transition: all 250ms cubic-bezier(0.55, 0, 0.1, 1) 0s;
+    display: block;
+    font-weight: 300; }
+  .sidebar-menu__submenu {
+    position: relative;
+    padding-bottom: 2rem; }
+    .sidebar-menu__submenu:before, .sidebar-menu__submenu:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 20px;
+      width: 55px;
+      z-index: 1; }
+    .sidebar-menu__submenu:before {
+      left: 0;
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+0,0+100;White+to+Transparent */
+      /* FF3.6-15 */
+      background: -webkit-linear-gradient(left, #e8e8e8 0%, rgba(232, 232, 232, 0) 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to right, #e8e8e8 0%, rgba(232, 232, 232, 0) 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 );
+      /* IE6-9 */ }
+    .sidebar-menu__submenu:after {
+      right: 0;
+      /* FF3.6-15 */
+      background: -webkit-linear-gradient(right, #e8e8e8 0%, rgba(232, 232, 232, 0) 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to left, #e8e8e8 0%, rgba(232, 232, 232, 0) 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 );
+      /* IE6-9 */ }
+  .sidebar-menu .mCSB_container {
+    padding-bottom: 2px; }
+
+#page-wrapper {
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s; }
+  #page-wrapper.sidebar-active {
+    -webkit-transform: translateY(172px);
+    transform: translateY(172px); }
 
 .form-searcher {
   display: none;
@@ -10508,7 +10573,8 @@ Copyright (c) 2015 Daniel Eden
       bottom: 5px; }
 
 .footer {
-  padding: 7rem 0; }
+  padding: 7rem 0 0;
+  border-bottom: 5px solid #212a34; }
 
 .footer-post {
   max-width: 1700px;
@@ -10540,5 +10606,65 @@ Copyright (c) 2015 Daniel Eden
       border: 0; }
   .footer-post__anchor {
     font-weight: 300; }
+  .footer-post__copyright p {
+    margin-bottom: 0;
+    opacity: .8; }
+
+.widget--footer {
+  padding-bottom: 4rem; }
+
+.list--arrowed {
+  padding-left: 1rem;
+  font-size: 1.4rem; }
+  .list--arrowed a {
+    display: inline-block;
+    padding: 0.5rem 0; }
+    .list--arrowed a:hover i {
+      color: #ff6200; }
+  .list--arrowed i {
+    padding-right: 1rem;
+    opacity: .8; }
+
+.address__item code {
+  font-size: 1.4rem;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0; }
+
+.address__item span, .address__item a {
+  display: block;
+  font-size: 1.4rem;
+  border: 1px solid #ebebeb;
+  border-radius: 0.4rem;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  padding: 1rem; }
+  .address__item span:hover, .address__item a:hover {
+    background-color: #ff6200;
+    border-color: #ff6200;
+    color: #fff; }
+
+.address__item + .address__item {
+  padding-top: 1rem; }
+
+.modal {
+  text-align: center; }
+
+.modal:before {
+  display: inline-block;
+  vertical-align: middle;
+  content: " ";
+  height: 100%; }
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+  width: 100%; }
+  @media (max-width: 767px) {
+    .modal-dialog {
+      max-width: 400px; } }
+  @media (max-width: 575px) {
+    .modal-dialog {
+      max-width: 320px; } }
 
 /*# sourceMappingURL=style.min.css.map */

@@ -7,26 +7,64 @@ footer.footer
 				.widget.widget--footer
 					.widget-inner
 						h5.widget_title Firma Bałtex
-						ul.list-unstyled
-							li: a(href="#", title="Transport międzynarodowy") Transport międzynarodowy
-							li: a(href="#", title="Sprzedaż tarcicy") Sprzedaż tarcicy
-							li: a(href="#", title="Magazyn czasowego składowania") Magazyn czasowego składowania
-							li: a(href="#", title="Faq") FAQ		
-							li: a(href="#", title="Kontakt") Kontakt
+						ul.list-unstyled.list--arrowed
+							li: a(href="transport-miedzynarodowy", title="Transport międzynarodowy") 
+								i.fa.fa-angle-right(aria-hidden='true')
+								span Transport międzynarodowy
+							li: a(href="sprzedaz-tarcicy", title="Sprzedaż tarcicy") 
+								i.fa.fa-angle-right(aria-hidden='true')
+								span Sprzedaż tarcicy
+							li: a(href="magazyn-czasowego-skladowania", title="Magazyn czasowego składowania") 
+								i.fa.fa-angle-right(aria-hidden='true')
+								span Magazyn czasowego składowania
+							li: a(href="najczesciej-zadawane-pytania", title="Faq") 
+								i.fa.fa-angle-right(aria-hidden='true')
+								span FAQ		
+							li: a(href="kontakt", title="Kontakt") 
+								i.fa.fa-angle-right(aria-hidden='true')
+								span Kontakt
 			.col-md-4
 				.widget.widget--footer
 					.widget-inner
 						h5.widget_title Informacje kontaktowe
+						address.address
+							.address__item
+								code Telefon
+								a(href="tel:123456789") 123-456-789
+							.address__item
+								code Fax
+								span 012-345-678
+							.address__item
+								code E-mail
+								a(href="mailto:testow@testowy.com.pl") testowy@testowy.com.pl
+							.address__item
+								code Siedziba
+								span(data-toggle="modal", data-target=".google-maps-direction") ul. Długowola 232, 27-300 Lipsko, Polska
 	.footer-post
 		.container
 			.row
 				.col-xs-12
 					.footer-post__inner
 						.footer-post__brand
-							h5.footer-post__logo Bałtex FHU #[sup &#174;]
+							p &copy; 2016 F.H.U. Bałtex. Wszystkie prawa zastrzeżone.
 						.footer-post__list
 							ul.list-unstyled
 								li.footer-post__element
-									a(href="#", title="Polityka cookies", class="footer-post__anchor link") Polityka cookies
+									a(href="polityka-cookies", title="Polityka cookies", class="footer-post__anchor link") Polityka cookies
 								li.footer-post__element
-									a(href="#", title="Mapa strony", class="footer-post__anchor link") Mapa strony
+									a(href="mapa-strony", title="Mapa strony", class="footer-post__anchor link") Mapa strony
+	.modal.fade.google-maps-direction(tabindex='-1', role='dialog', aria-labelledby='google-maps-direction', aria-hidden='true')
+		.modal-dialog
+			.modal-content
+				.modal-header 
+					h6 Czy chcesz sprawdzić #[strong lokalizację firmy Bałtex] na google maps?
+				.modal-body
+					p Google maps z lokalizacją otworzy się w nowym oknie. Umożliwi Ci to m.in.
+					ul.list-unstyled
+						li - zlokalizowanie Naszej siedziby na mapie Polski
+						li - wytyczenie trasy pomiędzy 2 punktami
+				.modal-footer
+					button.btn.btn-primary.js-btn-google-location(type='button') Zobacz widok mapy
+					button.btn.btn-secondary.js-btn-modal-close(type='button', data-dismiss='modal') Rezygnuję
+
+

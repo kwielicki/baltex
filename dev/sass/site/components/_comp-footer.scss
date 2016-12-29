@@ -1,5 +1,6 @@
 .footer {
-	padding: $spacer-xl 0;
+	padding: $spacer-xl 0 0;
+	border-bottom: 5px solid $brand-primary;
 }
 .footer-post {
 	max-width: $secion-max-width;
@@ -40,4 +41,15 @@
 	&__anchor {
 		font-weight: 300;
 	}
+	&__copyright p {
+		margin-bottom: 0;
+		opacity: .8;
+	}
 }
+
+.widget {
+	&--footer {
+		padding-bottom: $spacer-md;
+	}
+}
+

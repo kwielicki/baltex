@@ -11,42 +11,9 @@ nav.component.nav-bar
 								a(href="#", title="Sprzedaż tarcicy").nav-bar__sneakpeak Sprzedaż tarcicy
 								a(href="#", title="Magazyn czasowego składowania").nav-bar__sneakpeak Magazyn czasowego składowania
 						ul.nav-bar__nav.list-unstyled
-							li.nav-bar__search
-								a.nav-bar__icon.js-searcher(href="#", title="Wyszukaj frazy na stronie")
-									i.fa.fa-search(aria-hidden="true")
 							li.nav-bar__hamburger
 								a.nav-bar__icon.js-hamburger(href="#", title="Menu głowne strony")
 									i.fa.fa-bars(aria-hidden="true")
-								.nav-bar__dropdown
-									ul.nav-bar__submenu.list-unstyled
-										li
-											a(href="#", title="Informacje kontaktowe")
-												i.fa.fa-envelope(aria-hidden="true")
-												span Kontakt
-										li
-											a(href="#", title="Wydrukuj stronę", class="js-window-print")
-												i.fa.fa-print(aria-hidden="true")
-												span Drukuj
-										li
-											a(href="#", title="Dodaj do ulubionych", class="js-bookmark-application")
-												i.fa.fa-bookmark(aria-hidden="true")
-												span Ulubione
-									.nav-bar__divider
-										hr
-									ul.nav-bar__submenu.list-unstyled
-										li
-											a(href="#", title="Informacje kontaktowe")
-												i.fa.fa-envelope(aria-hidden="true")
-												span Galeria
-										li
-											a(href="#", title="Informacje kontaktowe")
-												i.fa.fa-envelope(aria-hidden="true")
-												span FAQ
-										li
-											a(href="#", title="Informacje kontaktowe")
-												i.fa.fa-envelope(aria-hidden="true")
-												span Opinie
-
 				.col-xs-12
 					.component.form-searcher
 						.form-searcher__inner
@@ -56,3 +23,32 @@ nav.component.nav-bar
 										input(type="text" class="form-control form-searcher__input", placeholder="Wyszukaj na stronie" required)
 										button(type="submit" class="btn btn-primary form-searcher__button") Wyszukaj w serwisie
 										span.form-searcher__label Wpisz słowo lub frazę, aby wyszukać w witrynie
+.sidebar-menu
+	.container
+		.row
+			.col-xs-12
+				ul.sidebar-menu__submenu.list-unstyled
+					li
+						a(href="#", title="Informacje kontaktowe")
+							code.sidebar-menu__title Kontakt
+							span.sidebar-menu__subtitle Skontakuj się z Nami
+					li
+						a(href="#", title="Wydrukuj stronę", class="js-window-print")
+							code.sidebar-menu__title Drukuj
+							span.sidebar-menu__subtitle Wydrukuj aktualną stronę
+					li
+						a(href="#", title="Dodaj do ulubionych", class="js-bookmark-application")
+							code.sidebar-menu__title Ulubione
+							span.sidebar-menu__subtitle Dodaj stronę do ulubionych
+					li
+						a(href="#", title="Informacje kontaktowe")
+							code.sidebar-menu__title Galeria
+							span.sidebar-menu__subtitle Spójrz na Nasze zdjęcia
+					li
+						a(href="#", title="Informacje kontaktowe")
+							code.sidebar-menu__title FAQ
+							span.sidebar-menu__subtitle Najczęściej zadawane pytania
+					li
+						a(href="#", title="Informacje kontaktowe")
+							code.sidebar-menu__title Opinie
+							span.sidebar-menu__subtitle Jak postrzegają Nas inni?

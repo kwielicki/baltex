@@ -1,0 +1,20 @@
+.list--arrowed {
+	padding-left: $spacer-xs;
+	font-size: $font-size-lg;
+	a {
+		display: inline-block;
+		padding: $spacer-xs/2 0;
+		&:hover {
+			i {
+				color: $brand-second;
+			}
+		}
+	}
+	i {
+		padding-right: $spacer-xs;
+		opacity: .8;
+	}
+	span {
+
+	}
+}

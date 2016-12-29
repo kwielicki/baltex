@@ -301,12 +301,8 @@
 
         // 3
         $('.js-hamburger').on('click', function(evt) {
-            $('.nav-bar__dropdown').toggleClass('is-active');
-            if ($('.nav-bar__dropdown').hasClass('is-active')) {
-                $('.nav-bar__dropdown').fadeIn(400);
-            } else {
-                $('.nav-bar__dropdown').fadeOut(400);
-            }
+            $('.sidebar-menu').toggleClass('sidebar-menu--active');
+            $('#page-wrapper').toggleClass('sidebar-active');
         });
 
         // 4
@@ -366,6 +362,13 @@
             return false;
         });
 
+        // 7 
+        $('.js-btn-google-location').on('click', function() {
+            var url = "https://www.google.pl/maps/dir//Ba%C5%82tex,+D%C5%82ugowola+Pierwsza+128,+27-300+Lipsko/@51.1039439,21.5831361,13.5z/data=!4m15!1m6!3m5!1s0x47229e1014989993:0xad41a8ec403e4a4!2zQmHFgnRleA!8m2!3d51.100704!4d21.5993461!4m7!1m0!1m5!1m1!1s0x47229e1014989993:0xad41a8ec403e4a4!2m2!1d21.5993461!2d51.100704"
+            window.open(url, '_blank');
+            $('.js-btn-modal-close').trigger('click');
+        })
+
 
 	}); //- Document on ready [end]
 
@@ -385,9 +388,16 @@
         }
 
         // 2
-        $(".nav-bar__dropdown").mCustomScrollbar({
+        $(".sidebar-menu .sidebar-menu__submenu").mCustomScrollbar({
+            axis: 'x',
+            mouseWheel: true,
             theme:"minimal-dark",
-            scrollInertia: 300
+            scrollInertia: 1000,
+            scrollbarPosition: 'outside',
+            alwaysShowScrollbar: 1,
+            advanced:{
+                autoExpandHorizontalScroll:true
+            }
         });
 
 		$body.addClass('window-loaded');
