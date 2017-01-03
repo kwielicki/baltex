@@ -236,13 +236,13 @@
             $('a[href]').each(function() {
                 var $this    = $(this),
                     attrHref = $this.attr('href');
+                if (!(($this.is('[href*="/"')) || ($this.is('[href*="#"')) || ($this.is('[href*="mailto:"')))) {
+                    $this.attr('data-rewrite-mode', attrHref + ".html");
 
-                $this.attr('data-rewrite-mode', attrHref + ".html");
-
-                var modeRewiteText = $this.attr('data-rewrite-mode');
-                console.log(modeRewiteText);
-                $this.attr('href', modeRewiteText);
-                $this.attr('data-rewrite-mode', attrHref);
+                    var modeRewiteText = $this.attr('data-rewrite-mode');
+                    $this.attr('href', modeRewiteText);
+                    $this.attr('data-rewrite-mode', attrHref);
+                }
             });
         }
 
@@ -300,9 +300,10 @@
         });
 
         // 3
-        $('.js-hamburger').on('click', function(evt) {
-            $('.sidebar-menu').toggleClass('sidebar-menu--active');
-            $('#page-wrapper').toggleClass('sidebar-active');
+        $('.top-nav__anchor--dropdown').on('click', function(evt) {
+            var thisWidth = $(this).outerWidth();
+            $(this).toggleClass('is-active');
+            $('.sidebar-menu').fadeToggle(400).css('width', thisWidth + 'px');
         });
 
         // 4
@@ -334,7 +335,7 @@
                     window.external.AddFavorite(bookmarkURL, bookmarkTitle);
                 } else {
                     // Other browsers (mainly WebKit & Blink - Safari, Chrome, Opera 15+)
-                    alert('Press ' + (/Mac/i.test(navigator.userAgent) ? 'Cmd' : 'Ctrl') + '+D to bookmark this page.');
+                    // TODO zaimplementować uruchomienie na webkicie
                 }
             return false;
         })
@@ -362,7 +363,7 @@
             return false;
         });
 
-        // 7 
+        // 7
         $('.js-btn-google-location').on('click', function() {
             var url = "https://www.google.pl/maps/dir//Ba%C5%82tex,+D%C5%82ugowola+Pierwsza+128,+27-300+Lipsko/@51.1039439,21.5831361,13.5z/data=!4m15!1m6!3m5!1s0x47229e1014989993:0xad41a8ec403e4a4!2zQmHFgnRleA!8m2!3d51.100704!4d21.5993461!4m7!1m0!1m5!1m1!1s0x47229e1014989993:0xad41a8ec403e4a4!2m2!1d21.5993461!2d51.100704"
             window.open(url, '_blank');

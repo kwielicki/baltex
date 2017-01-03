@@ -1,0 +1,41 @@
+.component.top-bar
+    .container
+        .row
+            .col-sm-6
+                ul.list-unstyled.list--icon
+                    li
+                        a(href="mailto:fhubaltex@vp.pl", title="Napisz do nas na adres mailowy - fhubaltex@vp.pl")
+                            i.fa.fa-envelope-o(aria-hidden="true")
+                            span fhubaltex@vp.pl
+                    li
+                        i.fa.fa-clock-o(aria-hidden="true")
+                        | Pon-Sob 8:00 - 18:00. Niedziela - nieczynne.
+            .col-sm-6
+                ul.list-unstyled.top-nav
+                    li.top-nav__element.top-nav__element--search
+                        a(href="#", class="top-nav__anchor top-nav__anchor--search") 
+                            i.fa.fa-search(aria-hidden="true")
+                            | Szukaj
+                    li.top-nav__element
+                        a(href="galeria-zdjec", class="top-nav__anchor") Galeria zdjęć
+                    li.top-nav__element
+                        a(href="najczesciej-zadawane-pytania", class="top-nav__anchor") Faq
+                    li.top-nav__element
+                        a(href="kontakt", class="top-nav__anchor") Kontakt
+                    li.top-nav__element.top-nav__element--dropdown
+                        a(href="#", class="top-nav__anchor top-nav__anchor--dropdown", title="Wydrukuj stronę, lub dodaj ją do ulubionych") 
+                            | Narzędzia dodatkowe
+                            i.fa.fa-angle-down(aria-hidden="true")
+                        ul.sidebar-menu
+                            li
+                                a(href="#", title="Wydrukuj stronę", class="js-window-print")
+                                    i.fa.fa-print(aria-hidden="true")
+                                    | Wydrukuj stronę
+                            li
+                                a(href="#", title="Dodaj do ulubionych", class="js-bookmark-application")
+                                    i.fa.fa-bookmark-o(aria-hidden="true")
+                                    | Dodaj do ulubionych
+                            li
+                                a(href="#", title="Opinie o naszej firmie")
+                                    i.fa.fa-comments-o(aria-hidden="true")
+                                    | Opinie o nas

@@ -16,7 +16,7 @@
     <meta property="og:description" content="Boilerplate - demo description">
     <meta property="og:image" content="">
     <title>Bałtex. Transport międzynarodowy</title>
-    <script src="https://use.fontawesome.com/60998be330.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <link rel="shortcut icon" href="assets/images/favicon.ico">
     <link rel="apple-touch-icon" href="assets/images/favicon.png">
     <link rel="stylesheet" href="assets/css/style.min.css">
@@ -47,6 +47,35 @@
     </div>
     <div id="page-wrapper">
       <main id="content-wrapper" class="content-wrapper">
+        <div class="component top-bar">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6">
+                <ul class="list-unstyled list--icon">
+                  <li><a href="mailto:fhubaltex@vp.pl" title="Napisz do nas na adres mailowy - fhubaltex@vp.pl"><i aria-hidden="true" class="fa fa-envelope-o"></i><span>fhubaltex@vp.pl</span></a></li>
+                  <li><i aria-hidden="true" class="fa fa-clock-o"></i>Pon-Sob 8:00 - 18:00. Niedziela - nieczynne.</li>
+                </ul>
+              </div>
+              <div class="col-sm-6">
+                <ul class="list-unstyled top-nav">
+                  <li class="top-nav__element top-nav__element--search"><a href="#" class="top-nav__anchor top-nav__anchor--search"> <i aria-hidden="true" class="fa fa-search"></i>Szukaj</a></li>
+                  <li class="top-nav__element"><a href="galeria-zdjec" class="top-nav__anchor">Galeria zdjęć</a></li>
+                  <li class="top-nav__element"><a href="najczesciej-zadawane-pytania" class="top-nav__anchor">Faq</a></li>
+                  <li class="top-nav__element"><a href="kontakt" class="top-nav__anchor">Kontakt</a></li>
+                  <li class="top-nav__element top-nav__element--dropdown"><a href="#" title="Wydrukuj stronę, lub dodaj ją do ulubionych" class="top-nav__anchor top-nav__anchor--dropdown">
+                       
+                      Narzędzia dodatkowe<i aria-hidden="true" class="fa fa-angle-down"></i></a>
+                    <ul class="sidebar-menu">
+                      <li><a href="#" title="Wydrukuj stronę" class="js-window-print"><i aria-hidden="true" class="fa fa-print"></i>Wydrukuj stronę</a></li>
+                      <li><a href="#" title="Dodaj do ulubionych" class="js-bookmark-application"><i aria-hidden="true" class="fa fa-bookmark-o"></i>Dodaj do ulubionych</a></li>
+                      <li><a href="#" title="Opinie o naszej firmie"><i aria-hidden="true" class="fa fa-comments-o"></i>Opinie o nas</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
         <nav class="component nav-bar">
           <div class="nav-bar__inner">
             <div class="container">
@@ -55,24 +84,7 @@
                   <div class="nav-bar__source">
                     <div class="nav-bar__header">
                       <h5 class="nav-bar__title">Bałtex FHU <sup>&#174;</sup></h5>
-                      <h6 class="nav-bar__subtitle"> <a href="#" title="Transport międzynarodowy" class="nav-bar__sneakpeak">Transport międzynarodowy</a><a href="#" title="Sprzedaż tarcicy" class="nav-bar__sneakpeak">Sprzedaż tarcicy</a><a href="#" title="Magazyn czasowego składowania" class="nav-bar__sneakpeak">Magazyn czasowego składowania</a></h6>
-                    </div>
-                    <ul class="nav-bar__nav list-unstyled">
-                      <li class="nav-bar__hamburger"><a href="#" title="Menu głowne strony" class="nav-bar__icon js-hamburger"><i aria-hidden="true" class="fa fa-bars"></i></a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col-xs-12">
-                  <div class="component form-searcher">
-                    <div class="form-searcher__inner">
-                      <form action="">
-                        <div class="form-group">
-                          <div class="form-group__inner">
-                            <input type="text" placeholder="Wyszukaj na stronie" required class="form-control form-searcher__input">
-                            <button type="submit" class="btn btn-primary form-searcher__button">Wyszukaj w serwisie</button><span class="form-searcher__label">Wpisz słowo lub frazę, aby wyszukać w witrynie</span>
-                          </div>
-                        </div>
-                      </form>
+                      <h6 class="nav-bar__subtitle"> <a href="/" title="Strona głowna" class="nav-bar__sneakpeak">Strona główna</a><a href="transport-miedzynarodowy" title="Transport międzynarodowy" class="nav-bar__sneakpeak">Transport międzynarodowy</a><a href="sprzedaz-suchej-tarcicy-dab-sosna" title="Sprzedaż tarcicy" class="nav-bar__sneakpeak">Sprzedaż tarcicy</a><a href="magazyn-czasowego-skladowania" title="Magazyn czasowego składowania" class="nav-bar__sneakpeak">Magazyn czasowego składowania</a></h6>
                     </div>
                   </div>
                 </div>
@@ -80,22 +92,6 @@
             </div>
           </div>
         </nav>
-        <div class="sidebar-menu">
-          <div class="container">
-            <div class="row">
-              <div class="col-xs-12">
-                <ul class="sidebar-menu__submenu list-unstyled">
-                  <li><a href="#" title="Informacje kontaktowe"><code class="sidebar-menu__title">Kontakt</code><span class="sidebar-menu__subtitle">Skontakuj się z Nami</span></a></li>
-                  <li><a href="#" title="Wydrukuj stronę" class="js-window-print"><code class="sidebar-menu__title">Drukuj</code><span class="sidebar-menu__subtitle">Wydrukuj aktualną stronę</span></a></li>
-                  <li><a href="#" title="Dodaj do ulubionych" class="js-bookmark-application"><code class="sidebar-menu__title">Ulubione</code><span class="sidebar-menu__subtitle">Dodaj stronę do ulubionych</span></a></li>
-                  <li><a href="#" title="Informacje kontaktowe"><code class="sidebar-menu__title">Galeria</code><span class="sidebar-menu__subtitle">Spójrz na Nasze zdjęcia</span></a></li>
-                  <li><a href="#" title="Informacje kontaktowe"><code class="sidebar-menu__title">FAQ</code><span class="sidebar-menu__subtitle">Najczęściej zadawane pytania</span></a></li>
-                  <li><a href="#" title="Informacje kontaktowe"><code class="sidebar-menu__title">Opinie</code><span class="sidebar-menu__subtitle">Jak postrzegają Nas inni?</span></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
         <div class="container">
           <div class="row">
             <div class="col-xs-12">

@@ -27,7 +27,7 @@ html()&attributes({
         meta(property="og:description" content=page_description)
         meta(property="og:image" content=page_image)
         title= page_title
-        script(src="https://use.fontawesome.com/60998be330.js")
+        link(rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css")
         link(rel='shortcut icon' href=path_image + 'favicon.ico')
         link(rel='apple-touch-icon' href=path_image + 'favicon.png')
         link(rel='stylesheet' href=path_css + 'style.min.css')
@@ -42,9 +42,10 @@ html()&attributes({
         //- Preloader
         if preloader
         #page-wrapper
-            //- Top bar
-            if top_bar
             main#content-wrapper.content-wrapper
+                //- Top bar
+                if top_bar
+                    include ../includes/top-bar
                 //- Nav bar
                 if nav_bar
                     include ../includes/nav-bar

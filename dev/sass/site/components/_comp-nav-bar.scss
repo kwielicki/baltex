@@ -85,112 +85,42 @@
 }
 
 // Sidebar menu
-
 .sidebar-menu {
-	@include clearfix;
+	display: none;
 	position: absolute;
-	top: 0;
+	top: 100%;
 	right: 0;
 	left: 0;
 	width: 100%;
 	z-index: 99;
-	background: #fff;
+	background-color: #fff;
+	border: 1px solid $gray-lighter;
+	border-top: 0;
 	margin: 0;
-	padding: $spacer-md 0 $spacer-xs 0;
-	transform: translateY(-172px);
-    transition: transform .3s;
-    background-color: $gray-lighter;
-    li {
-    	float: left;
-    	padding: 0 $spacer-xs;
-    	min-width: 320px;
-    	a {
-    		position: relative;
-    		display: block;
-    		background-color: #e8e8e8;
-    		padding: $spacer-sm;
-    		border: 2px solid #e8e8e8;
-    		border-left: 4px solid $brand-second;
-    		border-top-left-radius: 4px;
-    		border-bottom-left-radius: 4px;
-    		box-shadow: 1px 2px 2px rgba(0,0,0, 0.5);
-    		padding-right: $spacer-sm;
-    		&:hover {
-    			.sidebar-menu__subtitle {
-    				color: $brand-primary;
-    			}
-    			&:before {
-    				color: $brand-primary;
-    			}
-    		}
-    		&:after {
-    			content: '';
-    			position: absolute;
-    			right: -1px;
-    			top: -1px;
-    			bottom: -1px;
-    			width: $spacer;
-    			background-color: #f5f5f5;
-    		}
-    		&:before {
-    			@include transition;
-    			content: "\f054";
-			    font-family: FontAwesome;
-			    font-style: normal;
-			    font-weight: normal;
-			    text-decoration: inherit;
-			    color: #dbdcdd;
-			    font-size: 15px;
-			    position: absolute;
-			    top: 50%;
-			    right: 6px;
-			    transform: translateY(-50%);
-			    z-index: 1;
-			    line-height: 1;
-    		}
-    	}
-    }
-    &__subtitle {
-    	@include transition;
-    	display: block;
-    	font-weight: 300;
-    }
-    &__submenu {
-    	position: relative;
-    	padding-bottom: $spacer-sm;
-    	&:before, &:after {
-    		content: '';
-    		position: absolute;
-    		top: 0;
-    		bottom: 20px;
-    		width: 55px;
-    		z-index: 1;
-    	}
-    	&:before {
-			left: 0;
-    		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+0,0+100;White+to+Transparent */
-			background: -moz-linear-gradient(left,  rgba(232,232,232,1) 0%, rgba(232,232,232,0) 100%); /* FF3.6-15 */
-			background: -webkit-linear-gradient(left,  rgba(232,232,232,1) 0%,rgba(232,232,232,0) 100%); /* Chrome10-25,Safari5.1-6 */
-			background: linear-gradient(to right,  rgba(232,232,232,1) 0%,rgba(232,232,232,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 */
-    	}
-    	&:after {
-    		right: 0;
-			background: -moz-linear-gradient(right,  rgba(232,232,232,1) 0%, rgba(232,232,232,0) 100%); /* FF3.6-15 */
-			background: -webkit-linear-gradient(right,  rgba(232,232,232,1) 0%,rgba(232,232,232,0) 100%); /* Chrome10-25,Safari5.1-6 */
-			background: linear-gradient(to left,  rgba(232,232,232,1) 0%,rgba(232,232,232,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 */
-
-    	}
-    }
-    .mCSB_container {
-		padding-bottom: 2px;
-	}	
-}
-
-#page-wrapper {
-    transition: transform .3s;
-    &.sidebar-active {
-    	transform: translateY(172px);
-    }
+	margin-top: 17px;
+	list-style-type: none;
+	padding-left: 0;
+	padding: $spacer-xs 0;
+	li {
+		margin: 0 1.5rem 0 2.5rem;
+		border-bottom: 1px solid $gray-lighter;
+		&:last-child {
+			border-bottom: 0;
+		}
+		a {
+			display: block;
+			padding: 1.2rem 0 1.2rem 0;
+			font-size: $font-size-lg;
+			color: $brand-primary-light;
+			&:hover {
+				color: $brand-primary;
+				i {
+					color: inherit;
+				}
+			}
+			i {
+				padding-right: $spacer-xs;
+			}
+		}
+	}
 }
