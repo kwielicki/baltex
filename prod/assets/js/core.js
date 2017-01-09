@@ -383,17 +383,19 @@
         /*
          * JAVASCRIPT CODE FOR SITE BALTEX
          * *******************************
-         * 1 - Synchronizacja wysokośći tytułu dla głownej karuzeli
-         * 2 - NavBar dropdown - użycie mCustomScrollbar
+         *
+         * 0 - Pobranie czasu ładowania strony
+         * 1 - NavBar dropdown - użycie mCustomScrollbar
          *
         */
 
-        // 1
-        if ($html.hasClass('mobile')) {
-            $(".main-slider").find('.main-slider__title').equalheight();
-        }
+        // 0
+        var dataTimeNow         = new Date().getTime(),
+            dataTimeDiff        = dataTimeNow - startTime,
+            dataTimeDiffSec     = (dataTimeDiff / 1000).toFixed(1);
+        console.log("Page loading time - " + dataTimeDiffSec + " second");
 
-        // 2
+        // 1
         $(".sidebar-menu .sidebar-menu__submenu").mCustomScrollbar({
             axis: 'x',
             mouseWheel: true,

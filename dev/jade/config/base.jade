@@ -15,6 +15,8 @@ html()&attributes({
     'data-mode-rewrite': 'on'
 })
     head
+        script(type="text/javascript")
+            | var startTime = new Date().getTime();
         meta(charset=charset)
         meta(name='description' content=page_description)
         meta(name='author' content=page_author)

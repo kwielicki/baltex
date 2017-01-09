@@ -1,5 +1,8 @@
 .info-box {
 	padding: 15px;
+	@include media-breakpoint-down(sm) {
+		padding: 15px 5px;
+	}
 	&__inner {
 		border: 1px solid $brand-second;
 		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);

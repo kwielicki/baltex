@@ -39,7 +39,7 @@ block page_content
 					)
 			.row
 				.col-xs-12
-					.component.ct-js-slick.slick--centered(data-dots="true", data-centerMode="true", data-centerPadding="30px", data-LGitems="3", data-MDitems="2", data-SMitems="2", data-XSitems="1", data-speed="700", data-arrows="false", data-initialSlide="1", data-autoplay="true")
+					.component.ct-js-slick.slick--centered(data-dots="true", data-centerMode="true", data-centerPadding="30px", data-LGitems="3", data-MDitems="2", data-SMitems="2", data-XSitems="1", data-autoplaySpeed="7000", data-speed="1000", data-arrows="false", data-initialSlide="1", data-autoplay="true")
 						.item
 							.info-box
 								.info-box__inner
@@ -63,6 +63,13 @@ block page_content
 										img(src="" + path_image + "company-contact.jpg")
 									.info-box__content
 										h5.info-box__title Informacje kontaktowe
+										p.info-box__description Siedziba Naszej firmy znajduje się w powiecie Lipskim w województwie mazowieckim.
+										ul.list-unstyled.list-header
+											li.list-header__item.list-header__item--header Dokładny adres
+											li.list-header__item Długowola Pierwsza 467 #[br] 27-300 Lipsko
+											li.list-header__item Telefon: 012-345-678
+											li.list-header__item Fax: 22-33-456-22
+											li.list-header__item E-mail: testowy@testowy.com.pl
 						.item
 							.info-box
 								.info-box__inner
@@ -70,7 +77,7 @@ block page_content
 										img(src="" + path_image + "company-share.jpg")
 									.info-box__content
 										h5.info-box__title Udostępnij stronę
-										i.fa.fa-bookmark(aria-hidden="true")
+										p.info-box__description Jeśli uważasz, że Nasza firma jest warta polecenia, możesz to zrobić korzystając z Facebooka, Twittera lub Google Plus. 
 	section.section.section--pattern.section--bottom0
 		.container
 			.row

@@ -62,3 +62,33 @@
 		padding-right: $spacer-xs;
 	}
 }
+
+.list-header {
+	margin-top: $spacer-md;
+	&__item {
+		position: relative;
+		font-weight: 300;
+		&:not(&--header) {
+			padding: $spacer-xs $spacer-sm;
+		}
+		&:before {
+			content: "\f00c";
+			font-family: FontAwesome;
+			font-style: normal;
+			font-weight: normal;
+			text-decoration: inherit; /*--adjust as necessary--*/
+		 	color: $brand-primary;
+			font-size: 14px;
+			position: absolute;
+			top: 3px;
+			left: 0;
+		}
+		&--header {
+			@extend code;
+			display: inline;
+			&:before {
+				display: none;
+			}
+		}
+	}
+}
