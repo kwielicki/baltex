@@ -375,6 +375,11 @@
             $('.js-btn-modal-close').trigger('click');
         })
 
+        // 8
+        if ($('.main-slider').length) {
+            $('.main-slider').find('.item').find('.main-slider__title').matchHeight();
+        }
+
 
 	}); //- Document on ready [end]
 
@@ -437,10 +442,6 @@
          * 1 - Synchronizacja wysokośći tytułu dla głownej karuzeli
          *
         */
-
-        if ($html.hasClass('mobile')) {
-            $(".main-slider").find('.main-slider__title').equalheight();
-        }
 
 
     }); //- window on resize [end]
