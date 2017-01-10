@@ -6,7 +6,6 @@
         $body         = $('body'),
         $deviceWidth  = (window.innerWidth > 0) ? window.innerWidth : screen.width,
         $deviceHeight = (window.innerHeight > 0) ? window.innerHeight : screen.height;
-
 	/** Get location and set data-location **/
     var $windowLocation = window.location.pathname;
         $html.attr('data-location', $windowLocation);
@@ -56,28 +55,6 @@
             }, TIMEOUT);
         });
 
-    /* Equal height */
-    $.fn.equalheight = function(){
-        var $this = $(this),
-            $array = [],
-            options = {
-              height: false,
-              minHeight: true,
-              reset: false
-            };
-        $this.each(function(){
-            var $outerHeight = $this.outerHeight();
-            $array.push($outerHeight);
-        });
-        var maxValue = Math.max.apply(Math,$array);
-        if (options['height'] === true){
-            $this.css('height', maxValue + "px");
-        }
-        if (options['minHeight'] === true){
-            $this.css('min-height', maxValue + "px");
-        }
-    };
-
     /* jQUery borwser /device */
     function detectDevices() {
         $html.addClass('ver-' + $.browser.versionNumber);
@@ -91,7 +68,6 @@
             $html.addClass('browser-mozilla');
         }
     }
-
     $(document).on('ready', function() {
 
         /** jQuery browser / device **/
@@ -241,7 +217,7 @@
             $('a[href]').each(function() {
                 var $this    = $(this),
                     attrHref = $this.attr('href');
-                if (!(($this.is('[href*="/"')) || ($this.is('[href*="#"')) || ($this.is('[href*="mailto:"')))) {
+                if (!(($this.is('[href*="/"')) || ($this.is('[href*="#"')) || ($this.is('[href*="mailto:"')) || ($this.is('[href*="tel:"')))) {
                     $this.attr('data-rewrite-mode', attrHref + ".html");
 
                     var modeRewiteText = $this.attr('data-rewrite-mode');
@@ -283,15 +259,15 @@
                 return "<span style='background-image: url(" + $(slider.$slides[i]).data('background') + ")'>" + "<h6>" + thumb;
             },
         });
-        $(".main-slider").on('beforeChange', function(){
-
+        $(".main-slider").on('afterChange', function(event, slick, currentSlide, nextSlide){
+            console.log( $(this).attr('id') );
             var $this = $(this);
-            $this.find(".slick-slide [data-fx]").each(function () {
+            $this.find(".item.slick-slide [data-fx]").each(function () {
                 var $content = $(this);
                 $content.removeClass($content.data('fx')).removeClass("activate");
             });
             setTimeout(function () {
-                $this.find(".slick-active [data-fx]").each(function () {
+                $this.find(".item.slick-active [data-fx]").each(function () {
                     var $content = $(this);
                     if ($content.data('time') != undefined) {
                         setTimeout(function () {
@@ -309,6 +285,7 @@
             var thisWidth = $(this).outerWidth();
             $(this).toggleClass('is-active');
             $('.sidebar-menu').fadeToggle(400).css('width', thisWidth + 'px');
+            evt.preventDefault()
         });
 
         // 4

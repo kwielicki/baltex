@@ -18,22 +18,25 @@ html()&attributes({
         script(type="text/javascript")
             | var startTime = new Date().getTime();
         meta(charset=charset)
-        meta(name='description' content=page_description)
+        block page_description
+            meta(name='description' content=page_description)
         meta(name='author' content=page_author)
         meta(http-equiv='X-UA-Compatible' content='IE=edge')
         meta(name='viewport' content='width=device-width initial-scale=1')
         meta(name='format-detection' content='telephone=no')
-        meta(property="og:url" content="http://www.your-domain.com/your-page.html")
+        meta(property="og:url" content="")
         meta(property="og:type" content="website")
         meta(property="og:title" content=page_title)
         meta(property="og:description" content=page_description)
         meta(property="og:image" content=page_image)
-        title= page_title
+        block page_title
+            title= page_title
         link(rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css")
         link(rel='shortcut icon' href=path_image + 'favicon.ico')
         link(rel='apple-touch-icon' href=path_image + 'favicon.png')
         link(rel='stylesheet' href=path_css + 'style.min.css')
     body()&attributes({'class': body_classes})
+        block variables
         include ../includes/socials-side-bar
         //- Google Analitics
         if google_analitics

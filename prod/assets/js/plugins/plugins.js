@@ -3812,5 +3812,7 @@ $(document).ready(function(){
             }
         })(false,'both',false,1);
     }
-    handleComplete();
+    if ($("#hand-animation").length) {
+        handleComplete();
+    }
 });

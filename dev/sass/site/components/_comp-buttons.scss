@@ -9,6 +9,14 @@
 			color: #fff;
 		}
 	}
+	&-transparent {
+		box-shadow: none;
+		border: 1px solid $brand-primary;
+		&:active, &:focus, &:hover {
+			color: #fff;
+			background-color: $brand-primary;
+		}
+	}
 }
 
 .btn {

@@ -71,16 +71,9 @@
 			color: $brand-second;
 		}
 	}
-	&__search,
 	&__hamburger {
 		float: left;
 		position: relative;
-	}
-	&__search {
-		padding-right: $spacer-xs;
-		@include media-breakpoint-down(sm) {
-			display: none;
-		}
 	}
 }
 

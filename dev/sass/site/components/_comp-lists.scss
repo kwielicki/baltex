@@ -64,24 +64,23 @@
 }
 
 .list-header {
-	margin-top: $spacer-md;
+	margin-top: $spacer;
 	&__item {
 		position: relative;
 		font-weight: 300;
 		&:not(&--header) {
-			padding: $spacer-xs $spacer-sm;
+			padding-left: $spacer-sm;
+			margin-top: $spacer-xs;
+			margin-left: $spacer-xs;
 		}
 		&:before {
-			content: "\f00c";
-			font-family: FontAwesome;
-			font-style: normal;
-			font-weight: normal;
-			text-decoration: inherit; /*--adjust as necessary--*/
-		 	color: $brand-primary;
-			font-size: 14px;
+			content: '';
 			position: absolute;
-			top: 3px;
+			top: 9px;
 			left: 0;
+			width: 6px;
+			height: 6px;
+			background-color: $body-color;
 		}
 		&--header {
 			@extend code;

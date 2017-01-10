@@ -1,5 +1,13 @@
 //- Document Head
 extends config/base
+
+//- Blok w którym możemy nadpisywać tagi z Heada
+block page_title
+	title= "Transport międzynarodowy | Bałtex"
+
+//- Blok który zatrzymuje wyświetlanie linku do Strony głownej, kiedy się na niej znajdujemy
+block link_to_home_page_disabled
+	
 block page_content
 	section.section.section--ghost
 		.component.main-slider(data-items="1", data-arrows="false", data-dots="true")
@@ -8,25 +16,31 @@ block page_content
 					.container
 						.row
 							.col-xs-12
-								.main-slider__content.animated(data-fx="fadeIn", data-time="300")
-									h2.main-slider__title Posiadamy ponad 12 letnie doświadczenie w&nbsp;branży spedycyjnej
-									a(href="#", title="").btn.btn-lg.btn-second Czytaj więcej o spedycji
+								+main-slider-title(
+									'Posiadamy ponad 12 letnie doświadczenie w&nbsp;branży spedycyjnej',
+									'transport-miedzynarodowy',
+									'Czytaj więcej o spedycji'
+								)
 			.item(data-background="" + path_image + "slider-02.jpg", data-background-mobile="" + path_image + "slider-02.jpg", data-thumb="Magazyn czasowego składowania").main-slider__item.main-slider__item--overlayed
 				.main-slider__inner
 					.container
 						.row
 							.col-xs-12
-								.main-slider__content.animated(data-fx="fadeIn", data-time="300")
-									h2.main-slider__title Cechuje nas&nbsp;doskonała znajomość problematyki celnej
-									a(href="#", title="").btn.btn-lg.btn-second Jak działa Naszmagazyn
+								+main-slider-title(
+									'Cechuje nas&nbsp;doskonała znajomość problematyki celnej',
+									'magazyn-czasowego-skladowania',
+									'Sprawdź, jak działa nasz magazyn'
+								)
 			.item(data-background="" + path_image + "slider-03.jpg", data-background-mobile="" + path_image + "slider-03.jpg", data-thumb="Sprzedaż suchej tarcicy dąb-sosna").main-slider__item.main-slider__item--overlayed
 				.main-slider__inner
 					.container
 						.row
 							.col-xs-12
-								.main-slider__content.animated(data-fx="fadeIn", data-time="300")
-									h2.main-slider__title Tarcica pochodzi wyłącznie z&nbsp;własnego przetarcia na&nbsp;nowoczesnych trakach 
-									a(href="#", title="").btn.btn-lg.btn-second Czym jest 
+								+main-slider-title(
+									'Tarcica pochodzi wyłącznie z&nbsp;własnego przetarcia na&nbsp;nowoczesnych trakach',
+									'sprzedaz-suchej-tarcicy-dab-sosna',
+									'Przeczytaj o naszej usłudze'
+								)
 	section.section
 		.container
 			.row
@@ -48,6 +62,8 @@ block page_content
 									.info-box__content
 										h5.info-box__title Profil firmy
 										p.info-box__description Firma #[code Bałtex] prowadzi swoją działalność od roku 1994. Pierwszą branżą był transport międzynarodowy. Z czasem firma ewoluowała i zaczęłą również inwestować w magazyn czasowego składowania. Od niedawna zajmujemy się również sprzedażą suchej tarcicy dąb - sosna.
+										.info-box__link
+											a(href="#", title="").btn.btn-lg.btn-transparent Więcej o firmie
 						.item
 							.info-box
 								.info-box__inner
@@ -67,9 +83,12 @@ block page_content
 										ul.list-unstyled.list-header
 											li.list-header__item.list-header__item--header Dokładny adres
 											li.list-header__item Długowola Pierwsza 467 #[br] 27-300 Lipsko
-											li.list-header__item Telefon: 012-345-678
+											li.list-header__item Telefon:&nbsp;
+												a(href="tel:123456789") 123-456-789
 											li.list-header__item Fax: 22-33-456-22
 											li.list-header__item E-mail: testowy@testowy.com.pl
+										.info-box__link
+											a(href="#", title="").btn.btn-lg.btn-transparent Sprawdź mapę 
 						.item
 							.info-box
 								.info-box__inner
