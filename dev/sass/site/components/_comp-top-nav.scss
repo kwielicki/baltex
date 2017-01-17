@@ -7,7 +7,7 @@
     float: right;
     &__element {
         float: left;
-		padding: $spacer-sm 15px;
+	      padding: $spacer-sm 15px;
         line-height: 1.1;
         &:nth-last-child(2), &:nth-last-child(3){
             a {
@@ -15,6 +15,9 @@
                     display: none;
                 }
             }
+        }
+        &:last-child {
+          padding-right: 0;
         }
         &--dropdown {
             position: relative;
@@ -25,7 +28,7 @@
     &__anchor {
         position: relative;
         font-size: $font-size-lg;
-		color: $brand-primary-light;
+		    color: $brand-primary-light;
         &--dropdown {
             position: relative;
             border: 1px solid $gray-lighter;
@@ -67,9 +70,14 @@
         background-color: $gray-lighter;
         padding: 1.2rem 1.5rem 1.5rem 1.5rem;
         border-radius: $border-radius;
-        &:hover, &:focus {
+        &:hover,
+        &:hover:focus {
             color: #fff;
             background-color: $brand-second;
+        }
+        &:focus {
+          color: $brand-second;
+          background-color: $gray-lighter;
         }
     }
 }

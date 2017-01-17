@@ -1,16 +1,16 @@
-.component.top-bar
+.component.top-bar.hidden-sm-down
     .container
         .row
-            .col-sm-6
+            .col-sm-6.col-md-3.col-lg-5.col-xl-6
                 ul.list-unstyled.list--icon
                     li
                         a(href="mailto:fhubaltex@vp.pl", title="Napisz do nas na adres mailowy - fhubaltex@vp.pl")
                             i.fa.fa-envelope-o(aria-hidden="true")
                             span fhubaltex@vp.pl
-                    li
+                    li.hidden-md-down
                         i.fa.fa-clock-o(aria-hidden="true")
-                        | Pon-Sob 8:00 - 18:00. Niedziela - nieczynne.
-            .col-sm-6
+                        | Pon-Sob 8:00 - 18:00#[span.span.hidden-lg-down . Niedziela - nieczynne.]
+            .col-sm-6.col-md-9.col-lg-7.col-xl-6
                 ul.list-unstyled.top-nav
                     li.top-nav__element
                         a(href="galeria-zdjec", class="top-nav__anchor") Galeria zdjęć

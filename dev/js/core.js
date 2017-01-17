@@ -356,16 +356,21 @@
         if ($('.main-slider').length) {
             $('.main-slider').find('.item').find('.main-slider__title').matchHeight();
         }
+        if ($('.info-box').length) {
+            $('.info-box').find('.info-box__inner').matchHeight();
+        }
 
         // 9
         if ($('.js-search').length) {
-            $('.js-search').on('click', function() {
+            $('.js-search').on('click', function(evt) {
                 $('.search-modal').addClass('search-modal--activated');
+                evt.preventDefault();
             });
 
-            $('.js-search-close').on('click', function() {
+            $('.js-search-close').on('click', function(evt) {
                 $('.search-modal').removeClass('search-modal--activated');
-            })
+                evt.preventDefault();
+            });
 
             $(document).on('keydown', function(e) {
                 if (e.keyCode == 27) {

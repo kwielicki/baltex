@@ -45,7 +45,7 @@
 			}
 		}
 	}
-	span {
+	span:not(.span) {
 		position: relative;
 		&:after {
 			@include transition;

@@ -29,35 +29,26 @@
         font-weight: normal;
         width: 100%;
         padding-left: 0;
-        line-height: 1;
     }
     &__notification {
         padding-top: $spacer-xs;
     }
     &__close {
+      @include transition;
         position: absolute;
         top: $spacer-xl;
         right: 0;
         font-size: $font-size-h1;
         font-weight: 300;
+        opacity: .6;
         &:after {
             content: '+';
             position: absolute;
             right: 0;
             transform: rotate(45deg);
         }
+        &:hover {
+          opacity: 1;
+        }
     }
-}
-
-::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: $gray;
-}
-::-moz-placeholder { /* Firefox 19+ */
-  color: $gray;
-}
-:-ms-input-placeholder { /* IE 10+ */
-  color: $gray;
-}
-:-moz-placeholder { /* Firefox 18- */
-  color: $gray;
 }
