@@ -357,6 +357,26 @@
             $('.main-slider').find('.item').find('.main-slider__title').matchHeight();
         }
 
+        // 9
+        if ($('.js-search').length) {
+            $('.js-search').on('click', function() {
+                $('.search-modal').addClass('search-modal--activated');
+            });
+
+            $('.js-search-close').on('click', function() {
+                $('.search-modal').removeClass('search-modal--activated');
+            })
+
+            $(document).on('keydown', function(e) {
+                if (e.keyCode == 27) {
+                    if ($('.search-modal').hasClass('search-modal--activated')) {
+                        $('.search-modal').removeClass('search-modal--activated');
+                    }
+                }
+            })
+
+        }
+
 
 	}); //- Document on ready [end]
 

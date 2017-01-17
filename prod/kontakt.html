@@ -71,6 +71,7 @@
                       <li><a href="#" title="Opinie o naszej firmie"><i aria-hidden="true" class="fa fa-comments-o"></i>Opinie o nas</a></li>
                     </ul>
                   </li>
+                  <li class="top-nav__element"><a href="#" class="js-search top-nav__search"><i class="fa fa-search"></i></a></li>
                 </ul>
               </div>
             </div>
@@ -85,12 +86,6 @@
                     <div class="nav-bar__header">
                       <h5 class="nav-bar__title">Bałtex FHU <sup>&#174;</sup></h5>
                       <h6 class="nav-bar__subtitle"><a href="/" title="Strona głowna" class="nav-bar__sneakpeak">Strona główna</a><a href="transport-miedzynarodowy" title="Transport międzynarodowy" class="nav-bar__sneakpeak">Transport międzynarodowy</a><a href="sprzedaz-suchej-tarcicy-dab-sosna" title="Sprzedaż tarcicy" class="nav-bar__sneakpeak">Sprzedaż tarcicy</a><a href="magazyn-czasowego-skladowania" title="Magazyn czasowego składowania" class="nav-bar__sneakpeak">Magazyn czasowego składowania</a></h6>
-                    </div>
-                    <div id="sb-search" class="sb-search">
-                      <form>
-                        <input id="search" placeholder="Enter your search term..." type="search" value="" name="search" class="sb-search-input">
-                        <input type="submit" value="" class="sb-search-submit"><span class="sb-icon-search"></span>
-                      </form>
                     </div>
                   </div>
                 </div>
@@ -172,6 +167,21 @@
           </div>
         </div>
       </footer>
+      <div class="component search-modal">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="search-modal__inner">
+                <h6 class="search-modal__header">Wyszukaj na stronie</h6>
+                <div class="search-modal__content">
+                  <input type="search" placeholder="Szukaj..." class="search-modal__input">
+                  <p class="search-modal__notification text-muted">Naciśnij klawisz <em>Esc</em> aby zamknąć, lub <em>Enter</em> aby wyszukać</p>
+                </div><a href="#" class="js-search-close search-modal__close"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="assets/js/vendor.min.js" charset="UTF-8"></script>
     <script src="assets/js/plugins/plugins.min.js" charset="UTF-8"></script>
