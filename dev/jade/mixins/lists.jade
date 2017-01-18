@@ -1,0 +1,7 @@
+//- List mobile
+mixin list-mobile
+    ul.list-unstyled.list-mobile
+        block
+mixin list-mobile__element(anchor,text)
+    li.list-mobile__element
+        a(href=anchor, title=text, class="list-mobile__anchor")=text

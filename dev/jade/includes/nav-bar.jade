@@ -12,3 +12,24 @@ nav.component.nav-bar
 								a(href="transport-miedzynarodowy", title="Transport międzynarodowy").nav-bar__sneakpeak Transport międzynarodowy
 								a(href="sprzedaz-suchej-tarcicy-dab-sosna", title="Sprzedaż tarcicy").nav-bar__sneakpeak Sprzedaż tarcicy
 								a(href="magazyn-czasowego-skladowania", title="Magazyn czasowego składowania").nav-bar__sneakpeak Magazyn czasowego składowania
+							.nav-bar__hamburger.hidden-md-up
+								.nav-bar__hamburger-menu
+									span.nav-bar__hamburger-element
+									span.nav-bar__hamburger-element
+									span.nav-bar__hamburger-element
+	.nav-bar__mobile
+		.container
+			.row
+				.col-xs-12
+					.form-mobile
+						input.form-mobile__input.form-control(type='search', placeholder='Wpisz szukaną frazę')
+						a(href='#').form-mobile__searcher
+							i.fa.fa-search
+					+list-mobile
+						//- Pierwszym argumentem jest href, drugim text anchora oraz jego title
+						+list-mobile__element('/','Strona główna')
+						+list-mobile__element('transport-miedzynarodowy','Transport międzynarodowy')
+						+list-mobile__element('sprzedaz-suchej-tarcicy-dab-sosna','Sprzedaż suchej tarcicy dąb-sosna')
+						+list-mobile__element('magazyn-czasowego-skladowania','Magazyn czasowego składowania')
+						+list-mobile__element('najczesciej-zadawane-pytania','Najczęściej zadawane pytania')
+						+list-mobile__element('kontakt','Informacje kontaktowe')

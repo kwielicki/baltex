@@ -4,3 +4,56 @@
 		color: inherit;
 	}
 }
+
+// Form group mobile
+
+.form-mobile {
+	position: relative;
+	&__input {
+		margin-top: $spacer-sm;
+		padding: $spacer-xs*1.5 $spacer-xs;
+	    background-color: $gray-lighter;
+	    box-shadow: none;
+		border-color: $gray;
+		&:focus {
+			background-color: $gray-lighter;
+			outline: none;
+			border-color: $gray;
+		}
+	}
+	&__searcher {
+		position: absolute;
+	    margin: 0;
+	    right: 0;
+	    top: 0;
+	    bottom: 0;
+	    background: #ffffff;
+	    width: 100px;
+	    height: auto;
+	    border: 1px solid $gray;
+	    border-left: 0;
+	    border-top-right-radius: $border-radius;
+	    border-bottom-right-radius: $border-radius;
+		&:before {
+			content: '';
+		    width: 0;
+		    height: 0;
+		    border-style: solid;
+		    border-width: 10px 10px 10px 0;
+		    border-color: $gray-lighter #fff $gray-lighter $gray-lighter;
+		    left: -10px;
+		    position: absolute;
+		    top: 50%;
+		    margin-top: -10px;
+		}
+		i {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%,-50%);
+			font-size: $font-size-h5;
+			margin-top: -1px;
+			color: $gray;
+		}
+	}
+}

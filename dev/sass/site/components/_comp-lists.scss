@@ -1,9 +1,8 @@
 .list--arrowed {
-	padding-left: $spacer-xs;
-	font-size: $font-size-lg;
+	padding-left: 0;
 	a {
 		display: inline-block;
-		padding: $spacer-xs/2 0;
+		padding: 0 0$spacer-xs/2 0;
 		&:hover {
 			i {
 				color: $brand-second;

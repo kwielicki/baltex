@@ -1,12 +1,15 @@
 footer.footer
 	.container
 		.row
-			.col-md-3
-
-			.col-md-5
+			.col-sm-12.col-md-6.col-lg-4
 				.widget.widget--footer
 					.widget-inner
-						h5.widget_title Firma Bałtex
+						h5.widget__title O firmie Bałtex
+						p.widget__description Prowadzimy swoją działalność od roku 1994. Pierwszą branżą był transport międzynarodowy. Z czasem firma ewoluowała i zaczęłą również inwestować w magazyn czasowego składowania. Od niedawna zajmujemy się również sprzedażą suchej tarcicy dąb - sosna.
+			.col-sm-12.col-md-6.col-lg-4
+				.widget.widget--footer
+					.widget__inner
+						h5.widget__title Najczęściej odwiedzane
 						ul.list-unstyled.list--arrowed
 							li: a(href="transport-miedzynarodowy", title="Transport międzynarodowy") 
 								i.fa.fa-angle-right(aria-hidden='true')
@@ -23,10 +26,10 @@ footer.footer
 							li: a(href="kontakt", title="Kontakt") 
 								i.fa.fa-angle-right(aria-hidden='true')
 								span Kontakt
-			.col-md-4
+			.col-sm-12.col-md-6.col-lg-4
 				.widget.widget--footer
-					.widget-inner
-						h5.widget_title Informacje kontaktowe
+					.widget__inner
+						h5.widget__title Informacje kontaktowe
 						address.address
 							.address__item
 								code Telefon
@@ -63,8 +66,7 @@ footer.footer
 					ul.list-unstyled
 						li - zlokalizowanie Naszej siedziby na mapie Polski
 						li - wytyczenie trasy pomiędzy 2 punktami
+					#google-map-modal
 				.modal-footer
-					button.btn.btn-primary.js-btn-google-location(type='button') Zobacz widok mapy
+					button.btn.btn-second.js-btn-google-location(type='button') Zobacz widok mapy
 					button.btn.btn-secondary.js-btn-modal-close(type='button', data-dismiss='modal') Rezygnuję
-
-

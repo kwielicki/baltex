@@ -8,7 +8,8 @@ var gulp			= require('gulp'),
 	sourcemaps		= require('gulp-sourcemaps'),
 	zip 			= require('gulp-zip'),
 	minify 			= require('gulp-minify'),
-	sitemap 		= require('gulp-sitemap');
+	sitemap 		= require('gulp-sitemap'),
+	babel			= require('gulp-babel');
 
 //- Paths variables
 var devJSPath 			= "dev/js/",
@@ -84,6 +85,9 @@ gulp.task('js-vendor', function() {
 //- Javascript main
 gulp.task('js-main', function() {
 	return gulp.src(devJSPath + 'core.js')
+		.pipe(babel({
+			presets: ['es2015']
+		}))
 		.pipe(plumber())
 		.pipe(gulp.dest(protAssetsJSPath))
 });
