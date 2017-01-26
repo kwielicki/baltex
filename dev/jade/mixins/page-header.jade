@@ -1,0 +1,9 @@
+mixin page-header(title,description,background,breadcrumbs)
+    header.component.page-header(data-breadcrumbs=breadcrumbs)
+        .page-header__inner
+            h1.page-header__title=title
+            p.page-header__description!=description
+            ol.breadcrumbs.js-breadcrumbs
+                li.breadcrumbs__item.breadcrumbs__item--static
+                    a(href="/")
+                        i.fa.fa-home

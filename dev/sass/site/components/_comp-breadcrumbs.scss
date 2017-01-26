@@ -1,0 +1,14 @@
+.breadcrumbs {
+    @include clearfix;
+    display: inline-block;
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    &__item {
+        text-align: left;
+        float: left;
+        &::first-letter {
+            text-transform: capitalize;
+        }
+    }
+}

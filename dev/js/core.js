@@ -243,6 +243,7 @@
          * 6 - Social media - udostępnianie strony
          * 7 - Google maps in modal + blank after confirmed
          * 8 - Match height plugin usage
+         * 9 - BreadCrumbs
          *
         */
 
@@ -427,6 +428,32 @@
             $('.nav-bar__mobile').slideToggle(400).toggleClass('is-active');
         });
 
+        // 10
+        if ($('.js-breadcrumbs').isExists()) {
+            /* Zakładamy, że pierwszym elementem będzie zawsze home-page
+             * ignorujemy zatem zawsze pierwszy
+             */
+
+            var breadCrumbs = {};
+            var listOfClass = {
+                liClass        : 'breadcrumbs__item',
+                liClassCurrent : 'breadcrumbs__item--current'
+            }
+
+            breadCrumbs.dataLocation = $('html').attr('data-location');
+
+            // Pozbywamy się "/" z data-location
+            breadCrumbs.dataLocationCurrent = breadCrumbs.dataLocation
+                       .slice(1, breadCrumbs.dataLocation.length);
+
+            // Pobieramy wyłącznie nazwę sekcji
+            breadCrumbs.dataLocationName = breadCrumbs.dataLocation
+                       .slice(1, breadCrumbs.dataLocation.length - 5);
+
+            $('.js-breadcrumbs').find('.breadcrumbs__item--static').after(
+                "<li class='" + listOfClass.liClass + " " + listOfClass.liClassCurrent + "'>" + breadCrumbs.dataLocationName + "</li>"
+            );
+        }
 
 	}); //- Document on ready [end]
 
