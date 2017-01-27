@@ -1,14 +1,52 @@
 .breadcrumbs {
     @include clearfix;
+    position: absolute;
     display: inline-block;
     list-style-type: none;
     padding-left: 0;
     margin-bottom: 0;
+    top: 100%;
+    @include media-breakpoint-down(sm) {
+        top: auto;
+        bottom: 0;
+        width: 100%;
+        background-color: $brand-primary;
+        left: 0;
+        padding: $spacer-xs 0;
+        padding-left: 15px;
+    }
     &__item {
         text-align: left;
         float: left;
+        cursor: default;
         &::first-letter {
             text-transform: capitalize;
+        }
+        &:after {
+            content: "\f105";
+            font-family: FontAwesome;
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: inherit;
+            font-size: 14px;
+            display: inline-block;
+            padding: 0 5px;
+        }
+        &:last-child {
+            &:after {
+                display: none;
+            }
+        }
+        a {
+            &:hover {
+                color: $brand-second;
+            }
+        }
+        @include media-breakpoint-down(sm) {
+            color: $gray;
+            a {
+                color: #fff;
+            }
         }
     }
 }

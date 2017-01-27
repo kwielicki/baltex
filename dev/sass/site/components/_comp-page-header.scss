@@ -1,6 +1,26 @@
 .page-header {
-    background-color: #f6f6f6;
     width: 100%;
-    text-align: center;
     padding: $spacer-xl 0;
+    position: relative;
+    @include media-breakpoint-down(sm) {
+        margin-bottom: 27rem;
+    }
+    &__inner {
+        @include media-breakpoint-down(sm) {
+            position: absolute;
+            top: 100%;
+            width: 100%;
+            margin-top: $spacer;
+        }
+    }
+    &__title {
+
+    }
+    &__description {
+        font-size: $font-size-h6;
+        padding-bottom: $spacer-md;
+        @include media-breakpoint-down(sm) {
+            padding-bottom: $spacer-xl;
+        }
+    }
 }
