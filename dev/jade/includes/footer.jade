@@ -5,7 +5,7 @@ footer.footer
 				.widget.widget--footer
 					.widget-inner
 						h5.widget__title O firmie Bałtex
-						p.widget__description Prowadzimy swoją działalność od roku 1994. Pierwszą branżą był transport międzynarodowy. Z czasem firma ewoluowała i zaczęłą również inwestować w magazyn czasowego składowania. Od niedawna zajmujemy się również sprzedażą suchej tarcicy dąb - sosna.
+						p.widget__description Prowadzimy swoją działalność od roku 1994. Pierwszą branżą był transport międzynarodowy. Z&nbsp;czasem firma ewoluowała i zaczęłą również inwestować w magazyn czasowego składowania. Od&nbsp;niedawna zajmujemy się również sprzedażą suchej tarcicy dąb - sosna.
 			.col-sm-12.col-md-6.col-lg-4
 				.widget.widget--footer
 					.widget__inner
@@ -42,7 +42,7 @@ footer.footer
 								a(href="mailto:testow@testowy.com.pl") testowy@testowy.com.pl
 							.address__item
 								code Siedziba
-								span(data-toggle="modal", data-target=".google-maps-direction") ul. Długowola 232, 27-300 Lipsko, Polska
+								span(data-toggle="modal", data-target="#google-maps-direction") ul. Długowola 232, 27-300 Lipsko, Polska
 	.footer-post
 		.container
 			.row
@@ -56,17 +56,27 @@ footer.footer
 									a(href="polityka-cookies", title="Polityka cookies", class="footer-post__anchor link") Polityka cookies
 								li.footer-post__element
 									a(href="mapa-strony", title="Mapa strony", class="footer-post__anchor link") Mapa strony
-	.modal.fade.google-maps-direction(tabindex='-1', role='dialog', aria-labelledby='google-maps-direction', aria-hidden='true')
-		.modal-dialog
-			.modal-content
-				.modal-header 
-					h6 Czy chcesz sprawdzić #[strong lokalizację firmy Bałtex] na google maps?
-				.modal-body
-					p Google maps z lokalizacją otworzy się w nowym oknie. Umożliwi Ci to m.in.
-					ul.list-unstyled
-						li - zlokalizowanie Naszej siedziby na mapie Polski
-						li - wytyczenie trasy pomiędzy 2 punktami
-					#google-map-modal
-				.modal-footer
-					button.btn.btn-second.js-btn-google-location(type='button') Zobacz widok mapy
-					button.btn.btn-secondary.js-btn-modal-close(type='button', data-dismiss='modal') Rezygnuję
+	+bs-modal(
+		'google-maps-direction',
+		'',
+		'',
+		'google-maps-direction',
+		'<strong> Lokalizacja firmy Bałtex </strong> na google maps.',
+		'button btn btn-secondary js-btn-modal-close',
+		'Rezygnuję',
+		'Jeśli chcesz wyznaczyć trasę pomiędzy wybraną przez Ciebie lokalizacją, a Naszą firmą wypełnij wymagane pole znajdujące się poniżej, a następnie kliknij przycisk <em>Wyznacz trasę</em>. Aby przedstawić Ci ją w jak najlepszej formie, aplikacja google-maps otworzy się w nowej zakładce.'
+	)
+	//- .modal.fade.google-maps-direction(tabindex='-1', role='dialog', aria-labelledby='google-maps-direction', aria-hidden='true')
+	//- 	.modal-dialog
+	//- 		.modal-content
+	//- 			.modal-header 
+	//- 				h6 Czy chcesz sprawdzić #[strong lokalizację firmy Bałtex] na google maps?
+	//- 			.modal-body
+	//- 				p Google maps z lokalizacją otworzy się w nowym oknie. Umożliwi Ci to m.in.
+	//- 				ul.list-unstyled
+	//- 					li - zlokalizowanie Naszej siedziby na mapie Polski
+	//- 					li - wytyczenie trasy pomiędzy 2 punktami
+	//- 				#google-map-modal
+	//- 			.modal-footer
+	//- 				button.btn.btn-second.js-btn-google-location(type='button') Zobacz widok mapy
+	//- 				button.btn.btn-secondary.js-btn-modal-close(type='button', data-dismiss='modal') Rezygnuję

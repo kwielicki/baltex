@@ -1,5 +1,4 @@
 //- Mixin for modal generator
-	:: Usage
 	+bs-modal(
 		'modalClassModifier',
 		'modalButtonClass',
@@ -7,12 +6,13 @@
 		'modalButtonTarget',
 		'modalDialogTitle',
 		'modalButtonCloseClass',
-		'modalButtonCloseText'
+		'modalButtonCloseText',
+		'modalBodyParagraph'
 	)
 
 - var secondButton = false
 
-mixin bs-modal(modalClassModifier, modalButtonClass, modalButtonText, modalButtonTarget, modalDialogTitle, modalButtonCloseClass, modalButtonCloseText, modalSizeModifier)
+mixin bs-modal(modalClassModifier, modalButtonClass, modalButtonText, modalButtonTarget, modalDialogTitle, modalButtonCloseClass, modalButtonCloseText, modalBodyParagraph)
 	div(class="component bs-modal " + modalClassModifier)
 		a(href="#",
 			class="bs-modal__button " + modalButtonClass,
@@ -27,9 +27,11 @@ mixin bs-modal(modalClassModifier, modalButtonClass, modalButtonText, modalButto
 					.modal-header
 						button.close(type='button', data-dismiss='modal', aria-label='Close')
 							span(aria-hidden='true') &times;
-						h4.modal-title=modalDialogTitle
+						h6.modal-title!=modalDialogTitle
 					.modal-body
-						block modal-body
+						p!=modalBodyParagraph
+						#google-map-modal
+						input(type="text", class="form-control js-google-map-localization", placeholder="Podaj zadaną lokalizację")
 					.modal-footer
 						button(class="bs-modal__close " + modalButtonCloseClass, type='button', data-dismiss='modal')=modalButtonCloseText
 						if secondButton

@@ -1,24 +1,15 @@
 .breadcrumbs {
     @include clearfix;
-    position: absolute;
     display: inline-block;
     list-style-type: none;
     padding-left: 0;
     margin-bottom: 0;
-    top: 100%;
-    @include media-breakpoint-down(sm) {
-        top: auto;
-        bottom: 0;
-        width: 100%;
-        background-color: $brand-primary;
-        left: 0;
-        padding: $spacer-xs 0;
-        padding-left: 15px;
-    }
     &__item {
         text-align: left;
         float: left;
         cursor: default;
+        padding: $spacer-sm 0;
+        color: $brand-second;
         &::first-letter {
             text-transform: capitalize;
         }
@@ -31,21 +22,24 @@
             font-size: 14px;
             display: inline-block;
             padding: 0 5px;
+            color: $brand-primary;
         }
         &:last-child {
             &:after {
                 display: none;
             }
         }
-        a {
-            &:hover {
-                color: $brand-second;
+        @include media-breakpoint-down(sm) {
+            &:after {
+                color: #fff;
             }
         }
-        @include media-breakpoint-down(sm) {
-            color: $gray;
-            a {
+        a {
+            @include media-breakpoint-down(sm) {
                 color: #fff;
+            }
+            &:hover {
+                color: $brand-second;
             }
         }
     }

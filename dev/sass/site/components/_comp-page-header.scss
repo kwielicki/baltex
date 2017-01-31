@@ -1,16 +1,19 @@
 .page-header {
     width: 100%;
-    padding: $spacer-xl 0;
-    position: relative;
-    @include media-breakpoint-down(sm) {
-        margin-bottom: 27rem;
-    }
     &__inner {
+        position: relative;
+        padding: $spacer-xl 0 0 0;
+        @include media-breakpoint-down(sm) {
+            padding-top: 300px; /* Aby uwidocznić nagłowek na szarym tle*/
+        };
+    }
+    &__source {
         @include media-breakpoint-down(sm) {
             position: absolute;
-            top: 100%;
+            bottom: 0;
             width: 100%;
-            margin-top: $spacer;
+            background-color: $gray-lighter;
+            padding: $spacer 0 $spacer-xs 0;
         }
     }
     &__title {
@@ -18,9 +21,17 @@
     }
     &__description {
         font-size: $font-size-h6;
-        padding-bottom: $spacer-md;
+        padding-bottom: $spacer-xl;
+    }
+    &__breadcrumbs {
+        background-color: $gray-lighter;
+        border-bottom: 1px solid $gray;
+        box-shadow: 0px 2px 5px $gray-lighter;
+        line-height: 1;
         @include media-breakpoint-down(sm) {
-            padding-bottom: $spacer-xl;
+            position: relative;
+            margin-top: $spacer-xl;
+            background-color: $brand-primary;
         }
     }
 }

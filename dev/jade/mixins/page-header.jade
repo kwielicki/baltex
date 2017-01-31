@@ -1,12 +1,17 @@
 mixin page-header(title,description,background)
-    header.component.page-header(data-parallax="250", data-background="" + path_image + background, data-background-mobile="" + path_image + background)
-        .page-header__inner
-            .container
-                .row
-                    .col-xs-12
-                        h1.page-header__title=title
-                        p.page-header__description!=description
-                        ol.breadcrumbs.js-breadcrumbs
-                            li.breadcrumbs__item.breadcrumbs__item--static
-                                a(href="/", title="Strona główna")
-                                    i.fa.fa-home
+    header.component.page-header
+        .page-header__inner(data-parallax="250", data-background="" + path_image + background, data-background-mobile="" + path_image + background)
+            .page-header__source
+                .container
+                    .row
+                        .col-xs-12
+                            h1.page-header__title=title
+                            p.page-header__description!=description
+            .page-header__breadcrumbs
+                .container
+                    .row
+                        .col-xs-12
+                            ol.breadcrumbs.js-breadcrumbs
+                                li.breadcrumbs__item.breadcrumbs__item--static
+                                    a(href="/", title="Strona główna")
+                                        | Strona głowna
