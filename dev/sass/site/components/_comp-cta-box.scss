@@ -1,0 +1,43 @@
+.cta-box {
+    &__inner {
+        display: table;
+        width: 100%;
+        @include media-breakpoint-up(md) {
+            margin: 0 -15px;
+        }
+    }
+    &__column {
+        display: table-cell;
+        vertical-align: middle;
+        @include media-breakpoint-down(sm) {
+            display: block;
+            text-align: center;
+        }
+        @include media-breakpoint-up(md) {
+            padding: 0 15px;
+        }
+        &--wide {
+            @include media-breakpoint-up(md) {
+                width: 70%;
+            }
+        }
+        &--short {
+            @include media-breakpoint-up(md) {
+                width: 30%;
+            }
+        }
+    }
+    &__title, &__description {
+        color: #fff;
+    }
+    &__button {
+        @include media-breakpoint-down(sm) {
+            padding-top: 30px;
+        }
+        @include media-breakpoint-down(xs) {
+            .btn {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -46,10 +46,9 @@ block page_content
 			.row
 				.col-xs-12
 					+section-header(
-						'Firma Bałtex',
+						'Firma Bałtex.',
 						'dowiedź się więcej o Naszej działalności',
-						'Prowadzimy swoją działalność od roku 1994. Pierwszą branżą był transport międzynarodowy. Z czasem firma ewoluowała i zaczęłą również inwestować w magazyn czasowego składowania. Od niedawna zajmujemy się również sprzedażą suchej tarcicy dąb - sosna.',
-						'01'
+						'Prowadzimy swoją działalność od roku 1994. Pierwszą branżą był transport międzynarodowy. Z czasem firma ewoluowała i zaczęłą również inwestować w magazyn czasowego składowania. Od niedawna zajmujemy się również sprzedażą suchej tarcicy dąb - sosna.'
 					)
 			.row
 				.col-xs-12
@@ -90,53 +89,16 @@ block page_content
 									.info-box__content
 										h5.info-box__title Udostępnij stronę
 										p.info-box__description Jeśli uważasz, że Nasza firma jest warta polecenia, możesz to zrobić korzystając z Facebooka, Twittera lub Google Plus. 
-	section.section.section--pattern.section--bottom0
+	section.section.section--gray
 		.container
 			.row
 				.col-xs-12
 					+section-header(
-						'Co w trawie piszczy',
-						'sprawdź co sądzą o Nas inni',
-						'Prowadzimy swoją działalność od roku 1994. Pierwszą branżą był transport międzynarodowy. Z czasem firma ewoluowała i zaczęłą również inwestować w magazyn czasowego składowania. Od niedawna zajmujemy się również sprzedażą suchej tarcicy dąb - sosna.',
-						'02'
+						'Firma Bałtex.',
+						'sprawdź co możemy Ci zaoferować'
 					)
-				.col-xs-12
-					.animated-canvas
-						img(src="" + path_image + "notebook-v-svg.png", alt, class="animated-canvas__image")
-						canvas(id="hand-animation" width="323" height="518")
 	section.section.section--motive
 		.container
 			.row
 				.col-xs-12
-					header.text-xs-center.text-white
-						h3 Piszą..., a Ty czytaj
-						h4 Dowiedz się w jaki sposób jesteśmy postrzegani przez innych 
-						p &nbsp;
-			.row
-				.col-xs-12
-					.ct-js-slick(data-MDitems="2", data-SMitems="2", data-XSitems="1",data-dots="true", data-centerPadding="30px", data-arrows="false", data-infinite="false")
-						.item
-							.component.feature-box
-								blockquote.feature-box__blockquote
-									i.fa.fa-quote-left.feature-box__quote.feature-box__quote--top
-									| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque volutpat ex eget nunc facilisis, vitae posuere ligula ultricies. Mauris fringilla mi quis nisi iaculis accumsan. Phasellus eu nisi viverra nunc ultrices rhoncus ut at dui.
-									i.fa.fa-quote-right.feature-box__quote.feature-box__quote--bottom
-								h5.feature-box__title Jan Kasprzak
-								p.feature-box__description Korzystałem z usług firmy Pana Andrzeja
-						.item
-							.component.feature-box
-								blockquote.feature-box__blockquote
-									i.fa.fa-quote-left.feature-box__quote.feature-box__quote--top
-									| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque volutpat ex eget nunc facilisis, vitae posuere ligula ultricies. Mauris fringilla mi quis nisi iaculis accumsan. Phasellus eu nisi viverra nunc ultrices rhoncus ut at dui.
-									i.fa.fa-quote-right.feature-box__quote.feature-box__quote--bottom
-								h5.feature-box__title Tadeusz Zalewski
-								p.feature-box__description Korzystałem z usług firmy Pana Andrzeja
-						.item
-							.component.feature-box
-								blockquote.feature-box__blockquote
-									i.fa.fa-quote-left.feature-box__quote.feature-box__quote--top
-									| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque volutpat ex eget nunc facilisis, vitae posuere ligula ultricies. Mauris fringilla mi quis nisi iaculis accumsan. Phasellus eu nisi viverra nunc ultrices rhoncus ut at dui. 
-									i.fa.fa-quote-right.feature-box__quote.feature-box__quote--bottom
-								h5.feature-box__title Zbigniew Kaczor
-								p.feature-box__description Korzystałem z usług firmy Pana Andrzeja
-						
+					include includes/cta-box
