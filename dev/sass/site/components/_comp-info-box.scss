@@ -4,11 +4,12 @@
 		padding: 15px 5px;
 	}
 	&__inner {
+		@include transition;
+		position: relative;
 		border: 1px solid $brand-second;
-		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
-		transition: box-shadow 0.3s ease-in-out;
 		&:hover {
-			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+			box-shadow: 0 10px 6px -6px #454545;
+			transform: translateY(-6px);
 		}
 	}
 	&__image {

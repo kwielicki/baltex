@@ -1,0 +1,23 @@
+.address-box {
+    border: 1px solid $gray;
+    &__inner {
+        background-color: #f9f9f9;
+        padding: $spacer;
+    }
+    &__title {
+        color: $brand-primary;
+        padding-bottom: $spacer-xs;
+    }
+    &__company-name {
+        font-size: $font-size-base;
+    }
+    &__list-element {
+        padding-bottom: 5px;
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+    &__list-anchor {
+        color: $brand-second;
+    }
+}

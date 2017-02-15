@@ -417,7 +417,7 @@
             $('.main-slider').find('.item').find('.main-slider__title').matchHeight();
         }
         if ($('.info-box').length) {
-            $('.slick-slider').find('.item').find('.info-box__inner').matchHeight();
+            $('.slick-slider').find('.item').find('.info-box__description').matchHeight();
         }
 
         // 9

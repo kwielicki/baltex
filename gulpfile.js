@@ -184,11 +184,18 @@ gulp.task('watch', function() {
     gulp.watch('dev/js/core.js', ['js-main']);
     gulp.watch('prod/*.html', browserSync.reload);
     gulp.watch('prod/assets/js/*.js', browserSync.reload);
-		gulp.watch('prod/assets/js/**/*.js', browserSync.reload);
+	gulp.watch('prod/assets/js/**/*.js', browserSync.reload);
 });
 
 //- Gulp default
 gulp.task('default', [
     'watch',
     'browser-sync'
-]) ;
+]);
+
+//- Gulp build Dev / Prod
+gulp.task('build-dev', [
+	'sass-site',
+	'js-main',
+	'jade'
+]);

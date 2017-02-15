@@ -1,0 +1,32 @@
+.form-control {
+	color: $brand-primary;
+    border-radius: 0;
+	&:focus {
+		color: inherit;
+	}
+}
+
+.form {
+    &-inner {
+        margin-left: -($grid-gutter-width-base)/2;
+        margin-right: -($grid-gutter-width-base)/2;
+    }
+    &-row {
+        @include clearfix;
+    }
+    &-group {
+        float: left;
+        width: 50%;
+        padding-left: $grid-gutter-width-base/2;
+        padding-right: $grid-gutter-width-base/2;
+        &--wide {
+            width: 100%;
+        }
+    }
+    &-label {
+        font-weight: 400;
+    }
+    &-control {
+
+    }
+}

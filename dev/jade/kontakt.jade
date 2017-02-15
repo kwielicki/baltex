@@ -8,3 +8,36 @@ block page_content
 		'Jesteśmy do Twojej dyspozycji </br> od poniedziałku do soboty.',
 		'kontakt-header-background.jpg'
 	)
+	section.section
+		.container
+			.row
+				.col-md-6
+					p Feel free to talk to our online representative at any time you please using our Live Chat system on our website or one of the below instant messaging programs.
+					p Please be patient while waiting for response. (24/7 Support!) #[strong Phone General Inquiries: 1-888-123-4567-8900]
+					h5.heading--bordered Formularz #[strong kontaktowy]
+					form.component.form
+						.form-inner
+							.form-row
+								.form-group
+									label(for="inlineFormName", class="form-label") Imię
+									.form-control-wrapper
+										input(type="text", id="inlineFormName", class="form-control")
+								.form-group
+									label(for="inlineFormEmail", class="form-label") E-mail
+									.form-control-wrapper
+										input(type="email", id="inlineFormEmail", class="form-control")
+							.form-row
+								.form-group.form-group--wide
+									label(for="inlineFormSubject", class="form-label") Subject
+									.form-control-wrapper
+										input(type="email", id="inlineFormSubject", class="form-control")
+							.form-row
+								.form-group.form-group--wide
+									label(for="inlineFormMessage", class="form-label") Message
+									.form-control-wrapper
+										textarea(id="inlineFormMessage", class="form-control")
+							.form-row
+								.form-group
+									button(type="submit", class="btn btn-second btn-lg") Wyślij wiadomość
+				.col-md-6
+					include includes/addres-box

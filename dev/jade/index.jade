@@ -8,7 +8,14 @@ block page_title
 //- Blok który zatrzymuje wyświetlanie linku do Strony głownej, kiedy się na niej znajdujemy
 block link_to_home_page_disabled
 	
+
 block page_content
+	div.sr-only
+		svg(style='display: none;', xmlns='http://www.w3.org/2000/svg')
+			symbol#blueberries(viewbox='0 0 53.308 53.308')
+				title
+					| Blue
+				path(d='M39.685,2.953c-7.524,0-13.623,6.099-13.623,13.623c0,2.243,0.552,4.353,1.512,6.219 c1.496-0.565,3.11-0.888,4.804-0.888c5.281,0,9.851,3.011,12.111,7.404c5.15-1.944,8.819-6.905,8.819-12.735 C53.308,9.052,47.208,2.953,39.685,2.953z', style='fill:#003879;')
 	section.section.section--ghost
 		.component.main-slider(data-items="1", data-arrows="false", data-dots="true")
 			.item.main-slider__item(data-background="" + path_image + "slider-01.jpg", data-background-mobile="" + path_image + "slider-01.jpg",, data-thumb="Transport międzynarodowy")
@@ -46,8 +53,7 @@ block page_content
 			.row
 				.col-xs-12
 					+section-header(
-						'Firma Bałtex.',
-						'dowiedź się więcej o Naszej działalności',
+						'<strong>Firma Bałtex</strong> - dowiedź się więcej o Naszej działalności',
 						'Prowadzimy swoją działalność od roku 1994. Pierwszą branżą był transport międzynarodowy. Z czasem firma ewoluowała i zaczęłą również inwestować w magazyn czasowego składowania. Od niedawna zajmujemy się również sprzedażą suchej tarcicy dąb - sosna.'
 					)
 			.row
@@ -71,6 +77,8 @@ block page_content
 									.info-box__content
 										h5.info-box__title Nasze usługi
 										p.info-box__description Prosperujemy na niżej wymienionych rynkach:
+										.info-box__link
+											a(href="#", title="").btn.btn-lg.btn-transparent Więcej o usługach
 						.item
 							.info-box
 								.info-box__inner
@@ -94,9 +102,31 @@ block page_content
 			.row
 				.col-xs-12
 					+section-header(
-						'Firma Bałtex.',
-						'sprawdź co możemy Ci zaoferować'
+						'<strong>Firma Bałtex</strong> - sprawdź co wyróżnia Nas spośród innych',
+						'Morbi imperdiet laoreet mi, vel porta lacus fermentum nec. Nulla facilisi. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam posuere sed lorem eget vehicula. Morbi vestibulum pretium mauris ac vulputate.'
 					)
+			.row
+				.col-sm-4
+					.component.image-box
+						.image-box__image
+							img(src="" + path_image + "trucking.png")
+						.image-box__inner
+							h6.image-box__title Sprawdzone samochody
+							p.image-box__description Morbi imperdiet laoreet mi, vel porta lacus fermentum nec. Nulla facilisi.
+				.col-sm-4
+					.component.image-box
+						.image-box__image
+							img(src="" + path_image + "packing.png")
+						.image-box__inner
+							h6.image-box__title Bezpieczne magazyny
+							p.image-box__description Morbi imperdiet laoreet mi, vel porta lacus fermentum nec. Nulla facilisi.
+				.col-sm-4
+					.component.image-box
+						.image-box__image
+							img(src="" + path_image + "crate.png")
+						.image-box__inner
+							h6.image-box__title Sprzedaż na wysokim poziomie
+							p.image-box__description Morbi imperdiet laoreet mi, vel porta lacus fermentum nec. Nulla facilisi.
 	section.section.section--motive
 		.container
 			.row

@@ -2,63 +2,44 @@
 	text-align: center;
 	margin-bottom: $spacer-xl;
 	&__title {
+		display: table;
 		position: relative;
-	    color: $brand-primary	;
-	    font-size: 70px;
-	    line-height: 1;
-		text-transform: uppercase;
-	    opacity: .15;
-	    @include media-breakpoint-down(sm) {
-	    	font-size: $font-size-h3;
-	    	text-transform: capitalize;
-	    }
-	    &:after {
-	    	content: '';
-	    	position: absolute;
-		    left: 0;
-		    right: 0;
-		    height: 20px;
-		    bottom: 0;
-	    	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+0,0+100;White+to+Transparent */
-			background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
-			background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
-			background: linear-gradient(to top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
-	    	@include media-breakpoint-down(sm) {
-	    		display: none;
-	    	}
-	    }
+		margin: 0 auto;
+	    color: $brand-second;
+		border-bottom: 1px solid $gray-lighter;
+		padding: 0 $spacer $spacer-sm $spacer;
+		font-weight: 300;
+		font-size: $font-size-h3;
+		&:after {
+			position: absolute;
+			bottom: -1px;
+			width: 80px;
+			height: 1px;
+			content: "";
+			display: inline-block;
+			background-color: $brand-second;
+			left: 50%;
+			margin-left: -40px;
+		}
+		&:before {
+			content: "";
+			position: absolute;
+			display: inline-block;
+		    bottom: -3px;
+		    width: 36px;
+		    height: 5px;
+			background-color: $brand-second;
+			left: 50%;
+			margin-left: -16px;
+			font-size: $font-size-h5;
+		}
 	}
 	&__subtitle {
+		padding-top: $spacer;
 		position: relative;
     	color: $blue-dark;
-    	text-transform: uppercase;
-	    margin-top: -10px;
+		font-weight: 300;
     	padding-bottom: $spacer-sm;
-    	@include media-breakpoint-down(sm) {
-	    	font-size: $font-size-h5;
-	    	text-transform: lowercase;
-	    }
-    	&:after {
-    		content: '';
-		    width: 50px;
-		    height: 2px;
-		    background: $blue-dark;
-		    display: block;
-		    margin: 0 auto;
-		    margin-top: 25px;
-    	}
-	}
-	&__description {
-		@include media-breakpoint-up(lg) {
-			max-width: $container-width-md;
-			margin: 0 auto;
-			font-family: $headings-font-family;
-			font-weight: 300;
-			font-size: $font-size-h6;
-		}
-		@include media-breakpoint-down(sm) {
-	    	text-align: justify;
-	    }
+		font-size: $font-size-h6;
 	}
 }

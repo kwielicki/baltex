@@ -1,0 +1,19 @@
+.image-box {
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid $gray;
+    margin-bottom: $spacer-sm;
+    &__image {
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+        margin: 0 auto;
+    }
+    &__inner {
+        padding: $spacer-sm;
+        margin-bottom: $spacer-sm;
+    }
+    &__description {
+        margin-bottom: 0;
+    }
+}

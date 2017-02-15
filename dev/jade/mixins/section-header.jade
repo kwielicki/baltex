@@ -1,5 +1,4 @@
-mixin section-header(sectionTitle, sectionSubtitle, sectionDescription, sectionCounter)
+mixin section-header(sectionTitle, sectionSubtitle)
 	header.component.section-header
-		h2.section-header__title(data-section-number=sectionCounter)=sectionTitle
+		h2.section-header__title(data-section-number=sectionCounter)!=sectionTitle
 		h3.section-header__subtitle=sectionSubtitle
-		p.section-header__description=sectionDescription
