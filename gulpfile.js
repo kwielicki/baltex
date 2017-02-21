@@ -37,7 +37,8 @@ gulp.task('browser-sync', function() {
 //- Vendor frameworks / helpers / plugins object
 var vendorJSobject = {
 	framework: {
-		jquery: "jquery.min.js"
+		jquery: "jquery.min.js",
+		jqueryUi: "jquery-ui-1.11.4.custom.js"
 	},
 	helpers: {
 		browser: "browser.min.js",
@@ -71,6 +72,7 @@ gulp.task('jade', function() {
 gulp.task('js-vendor', function() {
     return gulp.src([
             devJSVendorPath + vendorJSobject.framework.jquery,
+			devJSVendorPath + vendorJSobject.framework.jqueryUi,
             devJSVendorPath + vendorJSobject.helpers.browser,
             devJSVendorPath + vendorJSobject.helpers.device,
             devJSVendorPath + vendorJSobject.helpers.placeholder,
@@ -107,7 +109,8 @@ gulp.task('js-plugins', function() {
 		devJSPath + 'plugins/bootstrap/bs.util.js',
 		devJSPath + 'plugins/bootstrap/bs.modal.js',
 		devJSPath + 'plugins/custom-scroll-bar/jquery.mCustomScrollbar.min.js',
-		devJSPath + 'plugins/jquery-match-height/jquery-match-height.js'
+		devJSPath + 'plugins/jquery-match-height/jquery-match-height.js',
+		devJSPath + 'plugins/jquery-sticky-kit/jquery-sticky-kit.js'
 	])
 	.pipe(plumber())
 	.pipe(concat(pluginsJSConcat))

@@ -11,7 +11,9 @@ block page_content
 	section.section
 		.container
 			.row
-				.col-md-6
+				.col-md-6.push-md-6
+					include includes/addres-box
+				.col-md-6.pull-md-6
 					p Feel free to talk to our online representative at any time you please using our Live Chat system on our website or one of the below instant messaging programs.
 					p Please be patient while waiting for response. (24/7 Support!) #[strong Phone General Inquiries: 1-888-123-4567-8900]
 					h5.heading--bordered Formularz #[strong kontaktowy]
@@ -28,16 +30,23 @@ block page_content
 										input(type="email", id="inlineFormEmail", class="form-control")
 							.form-row
 								.form-group.form-group--wide
-									label(for="inlineFormSubject", class="form-label") Subject
+									label(for="inlineFormSubject", class="form-label") Temat wiadomości
 									.form-control-wrapper
-										input(type="email", id="inlineFormSubject", class="form-control")
+										select(id="inlineFormSubject", class="select js-select form-control")
+											option(value="Transport międzynarodowy") Transport międzynarodowy
+											option(value="Magazyn czasowego składowania") Magazyn czasowego składowania
+											option(value="Sucha tarcica dąb - sosna") Sucha tarcica dąb - sosna
+											option(value="Zapytanie o innym temacie") Zapytanie o innym temacie
 							.form-row
 								.form-group.form-group--wide
-									label(for="inlineFormMessage", class="form-label") Message
+									label(for="inlineFormMessage", class="form-label") Treść wiadomości
 									.form-control-wrapper
 										textarea(id="inlineFormMessage", class="form-control")
 							.form-row
 								.form-group
 									button(type="submit", class="btn btn-second btn-lg") Wyślij wiadomość
-				.col-md-6
-					include includes/addres-box
+	section.section.section--motive
+		.container
+			.row
+				.col-xs-12
+					include includes/cta-box

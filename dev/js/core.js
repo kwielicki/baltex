@@ -74,6 +74,7 @@
             $html.addClass('browser-mozilla');
         }
     $(document).on('ready', function() {
+
         /** jQuery browser / device **/
             detectDevices();
 
@@ -500,6 +501,16 @@
             handleLocationError();
 
         });
+        
+        // 12
+        if (!$html.hasClass('mobile') && $('.js-select').isExists()) {
+            $('.js-select').each(function() {
+               $(this).selectmenu({
+                   placeholder: "Select a speed",
+                   width: '100%'
+               });
+            });
+        }
 	}); //- Document on ready [end]
 
 	$(window).on('load', function() {
@@ -512,6 +523,7 @@
          * 1 - Dodanie odpowiedniej klasy, po załadowaniu strony
          * 2 - Uruchomienie parallaxu Skrollr
          * 3 - Css animate - wywołanie funkcji
+         * 4 - Sticki elements
         */
 
         // 0
@@ -533,6 +545,17 @@
 
         // 3
         cssAnimate();
+        
+        // 4
+        
+        if (!$html.hasClass('mobile')) {
+            $(".address-box").stickr({
+                offsetTop: 30,
+                offsetBottom: 30,
+                closest: ".section",
+                closeButton: true
+            });
+        }
 
 	});//- Window on load [end]
 
