@@ -22,12 +22,22 @@
         &--wide {
             width: 100%;
         }
+        @include media-breakpoint-down(xs) {
+            width: 100%;
+        }
+        label.error {
+            color: $brand-danger;
+            font-size: 1.4rem;
+        }
     }
     &-label {
         font-weight: 400;
     }
     &-control {
         @include transition;
+        &.error {
+            border-color: $brand-danger;
+        }
     }
     textarea {
         height: $textarea-height;

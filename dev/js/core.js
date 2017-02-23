@@ -305,10 +305,10 @@
 
         // 3
         var toggleClass = {
-            animated: 'animated activate fadeIn',
+            animated: '',
             activate: 'sidebar-menu--active'
         }
-        $('.top-nav__anchor--dropdown').on('click', function(evt) {
+        $('.top-nav__anchor--dropdown').on('click', function(event) {
             /*
              * Potrzebujemy dokładnej szerokośći, bez zaokrąglania, dlatego używam
              * natywnego JavaScriptu przy przekazywaniu wartości dla zmiennej thisWidth
@@ -319,8 +319,8 @@
             $('.sidebar-menu').toggleClass(toggleClass.animated + ' ' + toggleClass.activate).css({
                 'width'  : thisWidth + 'px'
             });
-            evt.preventDefault();
-            evt.stopPropagation();
+            event.preventDefault();
+            event.stopPropagation();
 
             if ($(this).hasClass('is-active')) {
                 $(this).find('.fa-angle-down').removeClass('fa-angle-down').addClass('fa-angle-up');
@@ -514,7 +514,6 @@
                 selectMenuIconClassList = selectMenuIcon.attr('class');
             $('.js-select').each(function() {
                $(this).selectmenu({
-                   placeholder: "Select a speed",
                    width: '100%',
                    create: function() {
                        $(this).next().children('.ui-icon')

@@ -39,6 +39,7 @@
                 right: 15px;
                 top: 50%;
                 transform: translateY(-50%);
+                pointer-events: none;
             }
             &:hover {
                 color: #fff;

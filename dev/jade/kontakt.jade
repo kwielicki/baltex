@@ -18,31 +18,31 @@ block page_content
 					p Please be patient while waiting for response. (24/7 Support!) #[strong Phone General Inquiries: 1-888-123-4567-8900]
 					h5.heading--bordered Formularz #[strong kontaktowy]
 						a(href="#", title="Pokaż więcej informacji").dialog-helper: i(class="fa fa-question-circle-o" aria-hidden="true")
-					form.component.form.js-form
+					form.component.form.js-form.validateIt
 						.form-inner
 							.form-row
 								.form-group
 									label(for="inlineFormName", class="form-label") Imię (opcjonalnie nazwisko)
 									.form-control-wrapper
-										input(type="text", id="inlineFormName", class="form-control")
+										input(type="text", id="inlineFormName", class="form-control", name="field[Name]", required)
 								.form-group
 									label(for="inlineFormEmail", class="form-label") E-mail
 									.form-control-wrapper
-										input(type="email", id="inlineFormEmail", class="form-control")
+										input(type="email", id="inlineFormEmail", class="form-control", name="field[Email]", required)
 							.form-row
 								.form-group.form-group--wide
 									label(for="inlineFormSubject", class="form-label") Temat wiadomości
 									.form-control-wrapper
-										select(id="inlineFormSubject", class="select js-select form-control")
+										select(id="inlineFormSubject", class="select js-select form-control", name="field[Subject]")
+											option(value="Zapytanie o innym temacie") Zapytanie o innym temacie
 											option(value="Transport międzynarodowy") Transport międzynarodowy
 											option(value="Magazyn czasowego składowania") Magazyn czasowego składowania
 											option(value="Sucha tarcica dąb - sosna") Sucha tarcica dąb - sosna
-											option(value="Zapytanie o innym temacie") Zapytanie o innym temacie
 							.form-row
 								.form-group.form-group--wide
 									label(for="inlineFormMessage", class="form-label") Treść wiadomości
 									.form-control-wrapper
-										textarea(id="inlineFormMessage", class="form-control js-textarea")
+										textarea(id="inlineFormMessage", class="form-control js-textarea", name="field[Message]", required)
 										div.textarea-signs
 											span.textarea-signs-text Pozostała liczba znaków:&nbsp;
 											span.textarea-signs-count(data-max-signs="350") #[code 350]

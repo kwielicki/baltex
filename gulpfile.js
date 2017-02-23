@@ -107,7 +107,9 @@ gulp.task('js-plugins', function() {
 		devJSPath + 'plugins/bootstrap/bs.modal.js',
 		devJSPath + 'plugins/custom-scroll-bar/jquery.mCustomScrollbar.min.js',
 		devJSPath + 'plugins/jquery-match-height/jquery-match-height.js',
-		devJSPath + 'plugins/jquery-sticky-kit/jquery-sticky-kit.js'
+		devJSPath + 'plugins/jquery-sticky-kit/jquery-sticky-kit.js',
+		devJSPath + 'plugins/forms/jquery.validate.min.js',
+		devJSPath + 'plugins/forms/jquery.form.init.js'
 	])
 	.pipe(plumber())
 	.pipe(concat(pluginsJSConcat))
