@@ -87,9 +87,6 @@ gulp.task('js-vendor', function() {
 //- Javascript main
 gulp.task('js-main', function() {
 	return gulp.src(devJSPath + 'core.js')
-		.pipe(babel({
-			presets: ['es2015']
-		}))
 		.pipe(plumber())
 		.pipe(gulp.dest(protAssetsJSPath))
 });
@@ -200,5 +197,7 @@ gulp.task('default', [
 gulp.task('build-dev', [
 	'sass-site',
 	'js-main',
+	'js-plugins',
+	'js-vendor',
 	'jade'
 ]);

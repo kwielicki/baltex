@@ -9,14 +9,23 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 p + h5 {
-	padding-top: $spacer;
+	margin-top: $spacer;
 }
 
 .heading--bordered {
+	position: relative;
 	border-bottom: 1px solid $gray-lighter;
 	padding-bottom: 5px;
 	margin-bottom: $spacer;
 	font-weight: 300;
+	.dialog-helper {
+        position: absolute;
+		right: 0;
+		top: 50%;
+		cursor: pointer;
+		font-size: $font-size-base;
+		transform: translateY(-50%);
+    }
 }
 
 a {

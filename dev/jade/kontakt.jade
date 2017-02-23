@@ -17,11 +17,12 @@ block page_content
 					p Feel free to talk to our online representative at any time you please using our Live Chat system on our website or one of the below instant messaging programs.
 					p Please be patient while waiting for response. (24/7 Support!) #[strong Phone General Inquiries: 1-888-123-4567-8900]
 					h5.heading--bordered Formularz #[strong kontaktowy]
-					form.component.form
+						a(href="#", title="Pokaż więcej informacji").dialog-helper: i(class="fa fa-question-circle-o" aria-hidden="true")
+					form.component.form.js-form
 						.form-inner
 							.form-row
 								.form-group
-									label(for="inlineFormName", class="form-label") Imię
+									label(for="inlineFormName", class="form-label") Imię (opcjonalnie nazwisko)
 									.form-control-wrapper
 										input(type="text", id="inlineFormName", class="form-control")
 								.form-group
@@ -41,7 +42,10 @@ block page_content
 								.form-group.form-group--wide
 									label(for="inlineFormMessage", class="form-label") Treść wiadomości
 									.form-control-wrapper
-										textarea(id="inlineFormMessage", class="form-control")
+										textarea(id="inlineFormMessage", class="form-control js-textarea")
+										div.textarea-signs
+											span.textarea-signs-text Pozostała liczba znaków:&nbsp;
+											span.textarea-signs-count(data-max-signs="350") #[code 350]
 							.form-row
 								.form-group
 									button(type="submit", class="btn btn-second btn-lg") Wyślij wiadomość
@@ -50,3 +54,8 @@ block page_content
 			.row
 				.col-xs-12
 					include includes/cta-box
+	#dialog-helper(title="Informacje pomocnicze")
+		p.small 
+			| Formularz kontaktowy ma charakter wyłącznie informacyjny. Za jego pośrednictwem nie przyjmujemy żadnych dyspozycji związanych z posiadanymi przez Ciebie produktami bankowymi. Prosimy nie podawać w treści wiadomości takich danych, jak: hasła, dane osobowe, numery kart płatniczych, PIN-y, kody CVV2.
+			#[br]
+			strong Dołożymy wszelkich starań, aby odpowiedzieć w ciągu 3 godzin. W wyjątkowych przypadkach, maksymalny czas odpowiedzi może wynieść do 18 godzin.

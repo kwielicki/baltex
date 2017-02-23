@@ -504,13 +504,112 @@
         
         // 12
         if (!$html.hasClass('mobile') && $('.js-select').isExists()) {
+            var css_class_pattern = {
+                opened: 'select-menu--opened',
+                iconDefault: 'ui-icon',
+                iconDown: 'fa fa-angle-down',
+                iconUp: 'fa fa-angle-up'
+            };
+            var selectMenuIcon          = $(this).next().find('.ui-icon'),
+                selectMenuIconClassList = selectMenuIcon.attr('class');
             $('.js-select').each(function() {
                $(this).selectmenu({
                    placeholder: "Select a speed",
-                   width: '100%'
+                   width: '100%',
+                   create: function() {
+                       $(this).next().children('.ui-icon')
+                              .removeAttr('class')
+                              .addClass(css_class_pattern.iconDefault + ' ' + css_class_pattern.iconDown)
+                   },
+                   open: function() {
+                       $(this).next().addClass(css_class_pattern.opened);
+                       $(this).next().children('.ui-icon')
+                              .removeAttr('class')
+                              .addClass(css_class_pattern.iconDefault + ' ' + css_class_pattern.iconUp)
+                   },
+                   close: function() {
+                       $(this).next().removeClass(css_class_pattern.opened);
+                       $(this).next().children('.ui-icon')
+                              .removeAttr('class')
+                              .addClass(css_class_pattern.iconDefault + ' ' + css_class_pattern.iconDown)
+                   }
                });
             });
         }
+        
+        // 13 
+        if ($('.js-form').isExists()) {
+            var forms = $('.js-form'),
+                formsTextarea = forms.find('.js-textarea'),
+                formTextareaCount = $('.textarea-signs').find('.textarea-signs-count'),
+                formTextareaCountMax = formTextareaCount.attr('data-max-signs');
+                
+            function setCounterText() {
+                formTextareaCount.children().text(formTextareaCountMax - formTextareaValueLength);
+            }
+                
+            var formTextareaValueLength;
+                if ($.isNumeric(formTextareaCountMax)) {
+                    formTextareaCountMax = parseInt(formTextareaCountMax, 10);
+                    
+                    formsTextarea.on('keypress keyup', function(event) {
+                        formTextareaValueLength = this.value.length;
+                
+                        /* Zabezpieczenie przed tym, aby nie wpisywać więcej niż jednej spacji
+                        *  pomiędzy słowami. Jeśli tak się zdarzy, spacje te zostaną zastąpione jedną.
+                        */
+                        this.value = this.value.replace(/  +/g, ' ');
+                    
+                        if (formTextareaValueLength >= formTextareaCountMax) {
+                            setCounterText();
+                            if (event.which) {
+                                return false;
+                            }
+                        } else {
+                            setCounterText();
+                        }
+                    });
+                } else {
+                    console.error('Uncaught ReferenceError: ' + formTextareaCountMax + ' is not a number.');
+                    $('.textarea-signs').find('.textarea-signs-count').html('<code>-</code>');
+                }
+                
+        }
+        // 14
+        $( "#dialog-helper" ).dialog({
+            autoOpen: false,
+            draggable: false,
+            closeOnEscape: true,
+            resizable: false,
+            closeText: "Zamknij okno",
+            position: { my: "right top", at: "right top", of: '.dialog-helper' },
+            dialogClass: 'ui-dialog--simple',
+            show: {
+                effect: "fadeIn",
+                duration: 150
+            },
+            hide: {
+                effect: "fadeOut",
+                duration: 50
+            },
+            open: function() {
+                $(this).mCustomScrollbar({
+                    axis:"y",
+                    theme:"dark",
+                    alwaysShowScrollbar: 2,
+                    setHeight: false,
+                    mouseWheel: { 
+                        preventDefault: true 
+                    },
+                    live: "true"
+                });
+            }
+        });
+        $('.dialog-helper').on('click', function(event) {
+           $('#dialog-helper').dialog('open');
+           event.preventDefault();
+        });
+        
 	}); //- Document on ready [end]
 
 	$(window).on('load', function() {
@@ -530,7 +629,7 @@
         var dataTimeNow         = new Date().getTime(),
             dataTimeDiff        = dataTimeNow - startTime,
             dataTimeDiffSec     = (dataTimeDiff / 1000).toFixed(1);
-        console.log("Page loading time - " + dataTimeDiffSec + " second");
+        console.log("Czas ładowania strony wyniósł - " + dataTimeDiffSec + "s");
 
         // 1
 		$body.addClass('window-loaded');
@@ -547,13 +646,14 @@
         cssAnimate();
         
         // 4
-        
         if (!$html.hasClass('mobile')) {
             $(".address-box").stickr({
+                duration: 0,
                 offsetTop: 30,
                 offsetBottom: 30,
                 closest: ".section",
-                closeButton: true
+                closeButton: true,
+                closeChar: ''
             });
         }
 
