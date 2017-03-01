@@ -1,5 +1,7 @@
 .nav-bar {
 	display: block;
+	max-width: $secion-max-width;
+	margin: 0 auto;
 	&__inner {
 		background-color: $brand-primary;
 		border-bottom: 3px solid $brand-second;

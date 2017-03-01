@@ -1,0 +1,36 @@
+.rounded-box {
+    $root: &;
+    background-color: $brand-primary;
+    padding: $spacer-md $spacer;
+    border-radius: $border-radius;
+    + .rounded-box {
+        margin-top: $spacer-md;
+    }
+    &__title,
+    &__description {
+        color: #fff;
+    }
+    &__description {
+        &:last-of-type {
+            padding-bottom: $spacer;
+        }
+    }
+    .ct-js-slick {
+        /* the slides */
+        .slick-slide {
+            margin: 0 10px;
+        }
+        /* the parent */
+        .slick-list {
+            margin: 0 -10px;
+        }
+    }
+    &--gray {
+        background-color: $gray-lighter;
+        border: 1px solid $brand-second;
+        #{$root}__title,
+        #{$root}__description {
+            color: $brand-primary;
+        }
+    }
+}

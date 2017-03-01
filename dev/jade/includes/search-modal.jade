@@ -5,7 +5,7 @@
                 .search-modal__inner
                     h6.search-modal__header
                         | Wyszukaj na stronie
-                    .search-modal__content
-                        input(type="search", placeholder="Szukaj...", class="search-modal__input")
+                    form.search-modal__content
+                        input(type="search", placeholder="Szukaj...", class="search-modal__input", autofocus)
                         p.search-modal__notification.text-muted Naciśnij klawisz #[em Esc] aby zamknąć, lub #[em Enter] aby wyszukać
                     a(href="#", title="Zamknij", class="js-search-close search-modal__close")

@@ -1,0 +1,61 @@
+//- Document Head
+extends config/base
+block page_title
+	title= "O firmie | Bałtex"
+block page_content
+	+page-header(
+		'O firmie',
+		'Dostarczamy Klientom najwyższej jakości produkty dostosowane do ich potrzeb i wymagań.<br/>Atutem naszego przedsiębiorstwa jest duża dynamika rozwoju.',
+		'kontakt-header-background.jpg'
+	)
+	section.section
+		.container
+			.row
+				.col-md-7
+					ul.list-unstyled.component.timeline
+						li.timeline__element
+							h6.timeline__header From strategy to structure 1
+							p.timeline__description Maecenas iaculis fringilla magna sit amet volutert proin vestibu um, ex quis imperdiet tempus, nu turpis condimentum est, atur pretium urna.
+						li.timeline__element
+							h6.timeline__header From strategy to structure 2
+							p.timeline__description Maecenas iaculis fringilla magna sit amet volutert proin vestibu um, ex quis imperdiet tempus, nu turpis condimentum est, atur pretium urna.
+						li.timeline__element
+							h6.timeline__header From strategy to structure 3
+							p.timeline__description Maecenas iaculis fringilla magna sit amet volutert proin vestibu um, ex quis imperdiet tempus, nu turpis condimentum est, atur pretium urna.
+						li.timeline__element
+							h6.timeline__header From strategy to structure 3
+							p.timeline__description Maecenas iaculis fringilla magna sit amet volutert proin vestibu um, ex quis imperdiet tempus, nu turpis condimentum est, atur pretium urna.
+						li.timeline__element
+							h6.timeline__header From strategy to structure 3
+							p.timeline__description Maecenas iaculis fringilla magna sit amet volutert proin vestibu um, ex quis imperdiet tempus, nu turpis condimentum est, atur pretium urna.
+						li.timeline__element
+							h6.timeline__header From strategy to structure 3
+							p.timeline__description Maecenas iaculis fringilla magna sit amet volutert proin vestibu um, ex quis imperdiet tempus, nu turpis condimentum est, atur pretium urna.
+				.col-md-5
+					.component.rounded-box
+						.component.ct-js-slick(data-dots="true", data-LGitems="1", data-MDitems="1", data-SMitems="1", data-XSitems="1", data-autoplaySpeed="7000", data-speed="1000", data-arrows="false", data-autoplay="true")
+							.item
+								h6.rounded-box__title Czy potrzbujesz pomocy?
+								p.rounded-box__description My job is to help professionals to achieve their financial goals whilst having adequate protection along the way.
+								p.rounded-box__description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+								a(href="kontakt", title="Przejdź do strony kontaktowej", class="btn btn-lg btn-second") Skontakuj się z Nami
+							.item
+								h6.rounded-box__title Czy potrzbujesz pomocy?
+								p.rounded-box__description My job is to help professionals to achieve their financial goals whilst having adequate protection along the way.
+								p.rounded-box__description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+								a(href="kontakt", title="Przejdź do strony kontaktowej", class="btn btn-lg btn-second") Skontakuj się z Nami
+							.item
+								h6.rounded-box__title Czy potrzbujesz pomocy?
+								p.rounded-box__description My job is to help professionals to achieve their financial goals whilst having adequate protection along the way.
+								p.rounded-box__description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+								a(href="kontakt", title="Przejdź do strony kontaktowej", class="btn btn-lg btn-second") Skontakuj się z Nami
+					.component.rounded-box.rounded-box--gray
+						h6.rounded-box__title Czy potrzbujesz pomocy?
+						p.rounded-box__description My job is to help professionals to achieve their financial goals whilst having adequate protection along the way.
+						p.rounded-box__description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+						a(href="kontakt", title="Przejdź do strony kontaktowej", class="btn btn-lg btn-second") Skontakuj się z Nami
+	section.section.section--motive
+		.container
+			.row
+				.col-xs-12
+					include includes/cta-box

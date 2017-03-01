@@ -450,9 +450,12 @@
             // Pobieramy wyłącznie nazwę sekcji
             breadCrumbs.dataLocationName = breadCrumbs.dataLocation
                        .slice(1, breadCrumbs.dataLocation.length - 5);
+                       
+            // Pozbywamy się "-" i zamieniamy na spację
+            breadCrumbs.dataLocationNameWithoutDash = breadCrumbs.dataLocationName.replace(/-/g, ' ');
 
             $('.js-breadcrumbs').find('.breadcrumbs__item--static').after(
-                "<li class='" + listOfClass.liClass + " " + listOfClass.liClassCurrent + "'>" + breadCrumbs.dataLocationName + "</li>"
+                "<li class='" + listOfClass.liClass + " " + listOfClass.liClassCurrent + "'>" + breadCrumbs.dataLocationNameWithoutDash + "</li>"
             );
         }
 

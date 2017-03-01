@@ -1,5 +1,7 @@
 .top-bar {
     padding: $spacer-xs/2 0;
+    max-width: $secion-max-width;
+    margin: 0 auto;
 }
 .top-nav {
     @include clearfix;
