@@ -6,6 +6,10 @@ body {
 	padding-bottom: $spacer-xl;
 	max-width: 1700px;
 	margin: 0 auto;
+	@include media-breakpoint-down(sm) {
+		padding-top: $spacer-md;
+		padding-bottom: $spacer-md;
+	}
 	&--ghost {
 		padding: 0;
 	}

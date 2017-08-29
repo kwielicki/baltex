@@ -55,7 +55,7 @@
     border-radius: 0;
     padding: $input-padding-y $input-padding-x;
     line-height: $input-line-height;
-    border-color: $input-border-color;
+    border: 1px solid $input-border-color;
     span.ui-selectmenu-text {
         padding: 0;
         font-size: $font-size-base;
@@ -70,14 +70,18 @@
 .ui-selectmenu-menu {
     box-shadow: 0px 2px 5px #ebebeb;
     .ui-menu-item {
-        padding: $input-padding-y $input-padding-x;
+        padding: 0;
         border: 0;
-        &.ui-state-focus {
-            background-color: #f6f6f6;
+    }
+	.ui-menu-item-wrapper {
+		padding: $input-padding-y $input-padding-x;
+		&.ui-state-active {
+			background-color: #f6f6f6;
             border: 0;
             margin: 0;
-        }
-    }
+			color: $body-color;
+		}
+	}
 }
 
 //- Style dla widgetu dialog

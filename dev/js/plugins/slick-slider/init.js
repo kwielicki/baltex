@@ -19,7 +19,7 @@
 
     var $slick = $(".ct-js-slick"),
     $html      = $('html');
-    $(document).on('ready', function(){
+    $(document).ready( function(){
 
         // Main slider Height
 

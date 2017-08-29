@@ -58,37 +58,33 @@ block page_content
 					)
 			.row
 				.col-xs-12
-					.component.ct-js-slick.slick--centered(data-dots="true", data-centerMode="true", data-centerPadding="30px", data-LGitems="3", data-MDitems="2", data-SMitems="2", data-XSitems="1", data-autoplaySpeed="7000", data-speed="1000", data-arrows="false", data-initialSlide="1", data-autoplay="true")
+					.component.ct-js-slick.slick--centered(data-dots="true", data-centerMode="true", data-centerPadding="20px", data-LGitems="3", data-MDitems="2", data-SMitems="2", data-XSitems="1", data-autoplaySpeed="7000", data-speed="300", data-arrows="false", data-initialSlide="1.1", data-autoplay="true")
 						.item
-							.info-box
-								.info-box__inner
-									.info-box__image
-										img(src="" + path_image + "company-profile.jpg")
-									.info-box__content
-										h5.info-box__title Profil firmy
-										p.info-box__description Firma #[code Bałtex] prowadzi swoją działalność od roku 1994. Pierwszą branżą był transport międzynarodowy. Z czasem firma ewoluowała i zaczęłą również inwestować w magazyn czasowego składowania. Od niedawna zajmujemy się również sprzedażą suchej tarcicy dąb - sosna.
-										.info-box__link
-											a(href="#", title="").btn.btn-lg.btn-transparent Więcej o firmie
+							+info-box(
+								'company-profile.jpg',
+								'Profil firmy',
+								'Firma Bałtex prowadzi swoją działalność od roku 1994. Pierwszą branżą był transport międzynarodowy. Z czasem firma ewoluowała i zaczęłą również inwestować w magazyn czasowego składowania. Od niedawna zajmujemy się również sprzedażą suchej tarcicy dąb - sosna.',
+								'profil-firmy',
+								'Czytaj o firmie'
+							)
 						.item
-							.info-box
-								.info-box__inner
-									.info-box__image
-										img(src="" + path_image + "company-services.jpg")
-									.info-box__content
-										h5.info-box__title Nasze usługi
-										p.info-box__description Prosperujemy na niżej wymienionych rynkach:
-										.info-box__link
-											a(href="#", title="").btn.btn-lg.btn-transparent Więcej o usługach
+							+info-box(
+								'company-services.jpg',
+								'Nasze usługi',
+								'Prosperujemy na niżej wymienionych rynkach:',
+								'nasze-uslugi',
+								'Więcej o usługach'
+							)
 						.item
 							.info-box
 								.info-box__inner
 									.info-box__image
 										img(src="" + path_image + "company-contact.jpg")
 									.info-box__content
-										h5.info-box__title Informacje kontaktowe
+										h5.info-box__title Skontaktuj się z Nami
 										p.info-box__description Siedziba Naszej firmy znajduje się w powiecie Lipskim w województwie mazowieckim. #[code Dokładny adres] znajdziesz na Naszej stronie kontaktowej. Znajdziesz tam numer telefonu, adres mailowy oraz formularz kontaktowy.
 										.info-box__link
-											a(href="#", title="").btn.btn-lg.btn-transparent Sprawdź informacje kontaktowe
+											a(href="kontakt", title="").btn.btn-lg.btn-transparent Informacje kontaktowe
 						.item
 							.info-box
 								.info-box__inner

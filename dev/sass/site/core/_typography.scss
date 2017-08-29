@@ -25,6 +25,11 @@ p + h5 {
 		cursor: pointer;
 		font-size: $font-size-base;
 		transform: translateY(-50%);
+		background-color: $gray-lighter;
+		border-radius: $border-radius;
+		width: 25px;
+		height: 25px;
+		text-align: center;
     }
 }
 

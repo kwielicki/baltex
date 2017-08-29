@@ -31,11 +31,11 @@
 		.slick-dots {
 			margin: $spacer-sm 0 0;
 			padding: 0;
-			text-align: right;
+			text-align: center;
 			li {
 				display: inline-block;
-				width: 10px;
-				height: 10px;
+				width: $dots-width;
+				height: $dots-height;
 				margin: 0 5px;
 				&:last-child {
 					margin-right: 0;
@@ -43,9 +43,9 @@
 				button {
 					@include transition;
 					border-radius: 50%;
-					text-indent: -9999px;
-					width: 10px;
-					height: 10px;
+					text-indent: $text-indent;
+					width: $dots-width;
+					height: $dots-height;
 					border: 0;
 					margin: 0;
 					padding: 0;

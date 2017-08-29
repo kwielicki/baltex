@@ -1,0 +1,10 @@
+mixin info-box (imgPath, title, subtitle, anchorHref, anchorText)
+    .info-box(data-element-clickable="true" data-element-anchor='btn' data-component-name="info-box")
+        .info-box__inner
+            .info-box__image
+                img(src="" + path_image + imgPath)
+            .info-box__content
+                h5.info-box__title=title
+                p.info-box__description=subtitle
+                .info-box__link
+                    a(href=anchorHref, title="", data-anchor-clickable="true").btn.btn-lg.btn-transparent=anchorText

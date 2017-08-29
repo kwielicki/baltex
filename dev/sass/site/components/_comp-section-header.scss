@@ -1,6 +1,9 @@
 .section-header {
 	text-align: center;
 	margin-bottom: $spacer-xl;
+	@include media-breakpoint-down(sm) {
+		margin-bottom: $spacer-md;
+	}
 	&__title {
 		display: table;
 		position: relative;
@@ -10,6 +13,9 @@
 		padding: 0 $spacer $spacer-sm $spacer;
 		font-weight: 300;
 		font-size: $font-size-h3;
+		@include media-breakpoint-down(sm) {
+			font-size: $font-size-h5;
+		}
 		&:after {
 			position: absolute;
 			bottom: -1px;
@@ -41,5 +47,6 @@
 		font-weight: 300;
     	padding-bottom: $spacer-sm;
 		font-size: $font-size-h6;
+		margin-bottom: 0;
 	}
 }

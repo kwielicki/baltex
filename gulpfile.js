@@ -37,7 +37,7 @@ gulp.task('browser-sync', function() {
 //- Vendor frameworks / helpers / plugins object
 var vendorJSobject = {
 	framework: {
-		jquery: "jquery.min.js",
+		jquery: "jquery-3.2.1.min.js",
 		jqueryUi: "jquery-ui-1.11.4.custom.js"
 	},
 	helpers: {
@@ -72,6 +72,7 @@ gulp.task('jade', function() {
 gulp.task('js-vendor', function() {
     return gulp.src([
             devJSVendorPath + vendorJSobject.framework.jquery,
+            devJSVendorPath + vendorJSobject.framework.jqueryMigrate,
 			devJSVendorPath + vendorJSobject.framework.jqueryUi,
             devJSVendorPath + vendorJSobject.helpers.browser,
             devJSVendorPath + vendorJSobject.helpers.device,
@@ -108,6 +109,7 @@ gulp.task('js-plugins', function() {
 		devJSPath + 'plugins/custom-scroll-bar/jquery.mCustomScrollbar.min.js',
 		devJSPath + 'plugins/jquery-match-height/jquery-match-height.js',
 		devJSPath + 'plugins/jquery-sticky-kit/jquery-sticky-kit.js',
+		devJSPath + 'plugins/shorter-string/shorter-string.js',
 		devJSPath + 'plugins/forms/jquery.validate.min.js',
 		devJSPath + 'plugins/forms/jquery.form.init.js'
 	])
@@ -180,6 +182,7 @@ gulp.task('zip', function() {
 //- Gulp Watcher
 gulp.task('watch', function() {
     gulp.watch('dev/jade/**/*.jade', ['jade']);
+    gulp.watch('dev/jade/*.jade', ['jade']);
     gulp.watch('dev/sass/**/*.scss', ['sass-site']);
     gulp.watch('dev/sass/site/style.scss', ['sass-site']);
     gulp.watch('dev/js/vendor/*.js', ['js-vendor']);

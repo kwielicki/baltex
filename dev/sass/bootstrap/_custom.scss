@@ -26,6 +26,7 @@ $blue-dark			: #405e74;
 $brand-second		: #ff6200;
 $gray		  		: #c3c3c3;
 $gray-lighter		: #ebebeb;
+$gray-lighten		: #fafafa;
 $input-color-placeholder : $gray;
 
 //- Spacers
@@ -37,6 +38,7 @@ $spacer-xl	: 7rem;
 
 //- Border radius
 $border-radius:	.4rem;
+$border-rounded: 50%;
 
 //- Grid (Width without padding)
 $container-width-sm: 510px;
@@ -63,3 +65,10 @@ $input-line-height:   1.4 !default;
 $input-border-focus:  $brand-primary;
 $input-border-color:  $gray;
 $textarea-height:     250px;
+
+//- Slick slider
+$dots-width: 14px;
+$dots-height: 14px;
+
+//- Text indend
+$text-indent: -99999px;
